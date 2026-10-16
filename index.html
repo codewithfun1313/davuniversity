@@ -1,0 +1,1406 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Explore academic areas, learning at DAV University, Jalandhar, and find official information about admissions and campus life.">
+  <title>DAV University | Academics, Campus &amp; Admissions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dav: "#181617",
+            davgold: "#a51f2b",
+            davcream: "#ffffff",
+            davmist: "#f5f3f3",
+            davblue: "#a51f2b",
+            davred: "#a51f2b",
+            davgreen: "#a51f2b"
+          },
+          fontFamily: {
+            sans: ["DM Sans", "sans-serif"],
+            display: ["Manrope", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root {
+      --dav-ink: #181617;
+      --dav-gold: #a51f2b;
+      --dav-cream: #ffffff;
+      --dav-accent: #a51f2b;
+      --dav-line: #e9e5e5;
+    }
+    html { scroll-behavior: smooth; }
+    main section[id] { scroll-margin-top: 6rem; }
+    body { background: var(--dav-cream); color: var(--dav-ink); font-family: "DM Sans", sans-serif; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    h1, h2, h3, .display { font-family: "Manrope", sans-serif; letter-spacing: -.035em; }
+    h1.display { font-size: clamp(2rem, 4vw, 3.75rem) !important; }
+    h2.display { font-size: clamp(1.6rem, 2.7vw, 2.5rem) !important; }
+    h3.display { font-size: clamp(1rem, 1.35vw, 1.2rem) !important; }
+    main p:not(.section-kicker), footer p:not(.section-kicker) { text-align: justify; text-justify: inter-word; }
+    .topline { letter-spacing: .15em; }
+    .hero-photo { background-image: linear-gradient(90deg, rgba(25,25,25,.84) 0%, rgba(25,25,25,.64) 48%, rgba(25,25,25,.16) 100%), url("https://davuniversity.org/src2/img/home/back1.jpg?v=4"); background-position: center; background-size: cover; }
+    .section-kicker { letter-spacing: .14em; }
+    .program-card { transition: transform .2s ease, box-shadow .2s ease; }
+    .program-card:hover { transform: translateY(-3px); box-shadow: 0 14px 35px rgba(25,25,25,.09); }
+    .program-card[hidden] { display: none !important; }
+    .filter-button[aria-pressed="true"] { background: var(--dav-accent); color: white; border-color: var(--dav-accent); }
+    .image-caption { background: linear-gradient(0deg, rgba(25,25,25,.82), transparent 100%); }
+    .mobile-menu[hidden] { display: none; }
+    .focus-ring:focus-visible, a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid var(--dav-gold); outline-offset: 3px; }
+    .bs-btn { border-radius: .55rem; }
+    .topline-bar { border-top: 3px solid var(--dav-accent); background: #181617; }
+    .site-header { border-bottom: 1px solid rgba(24,22,23,.08); box-shadow: 0 5px 24px rgba(24,22,23,.055); }
+    .utility-bar { min-height: 31px; border-top: 2px solid #811923; background: #811923; color: #fff; }
+    .utility-bar > .container { width: 100%; max-width: none; padding-right: 0 !important; padding-left: 0 !important; }
+    .utility-bar a { color: inherit; text-decoration: none; transition: color .15s ease; }
+    .utility-bar a:hover, .utility-bar a:focus-visible { color: #ffe08a; }
+    .utility-bar a:hover strong, .utility-bar a:focus-visible strong { color: inherit; }
+    .utility-bar strong { color: #fff; font-weight: 700; }
+    .utility-marquee { overflow: hidden; font-size: 13px; }
+    .utility-marquee-track { display: flex; width: max-content; animation: utility-marquee-scroll 28s linear infinite; }
+    .utility-marquee:hover .utility-marquee-track, .utility-marquee:focus-within .utility-marquee-track { animation-play-state: paused; color: #fff; }
+    .utility-marquee-group { display: flex; flex: 0 0 auto; align-items: center; gap: 1.5rem; padding-right: 1.5rem; white-space: nowrap; }
+    .utility-marquee-separator { color: rgba(255,255,255,.5); }
+    @keyframes utility-marquee-scroll { to { transform: translateX(-50%); } }
+    .news-board { background: linear-gradient(180deg, #fff, #fbf8f8); }
+    .news-board-card { height: 100%; overflow: hidden; border: 1px solid #e5dddd; border-radius: .85rem; background: #fff; box-shadow: 0 8px 24px rgba(24,22,23,.045); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+    .news-board-card:hover, .news-board-card:focus-within { transform: translateY(-3px); border-color: rgba(129,25,35,.28); box-shadow: 0 14px 32px rgba(24,22,23,.09); }
+    .news-board-title { color: #e51e2a; font-size: 1rem; font-weight: 700; }
+    .news-marquee-window { height: 16rem; overflow: hidden; }
+    .news-marquee-track { display: flex; flex-direction: column; animation: news-vertical-scroll 24s linear infinite; }
+    .news-board-card:hover .news-marquee-track, .news-board-card:focus-within .news-marquee-track { animation-play-state: paused; }
+    .news-marquee-list { display: flex; flex: 0 0 16rem; flex-direction: column; justify-content: space-around; margin: 0; padding: .15rem 1.25rem 1rem; list-style: none; }
+    .news-marquee-list li { display: flex; align-items: center; gap: .55rem; color: #282428; font-size: .92rem; line-height: 1.4; }
+    .news-marquee-chevron { color: #8e8589; font-size: 1.2rem; line-height: 1; }
+    @keyframes news-vertical-scroll { to { transform: translateY(-50%); } }
+    .brand-row { min-height: 82px; }
+    .brand-logo { height: 48px; width: auto; }
+    .footer-logo { width: auto; height: 72px; }
+    .brand-name { font-family: "Manrope", sans-serif; font-size: clamp(1.12rem, 1.7vw, 1.48rem); font-weight: 800; letter-spacing: -.06em; line-height: 1; color: #211e1f; }
+    .brand-name span { color: var(--dav-accent); }
+    .brand-location { margin-top: .35rem; color: #777174; font-size: .59rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+    .brand-row > .container { position: relative; flex-wrap: wrap; }
+    .brand-row > .container > a { order: 1; }
+    .secondary-nav { order: 2; display: flex; min-width: 0; flex: 1 1 0%; flex-wrap: wrap; align-content: center; align-items: center; justify-content: flex-start; gap: .1rem .15rem; margin-top: 0; padding: .25rem 0; }
+    .secondary-nav a { flex: 0 0 auto; border-radius: .35rem; padding: .3rem .4rem; color: #000000; font-size: 14px; font-weight: 700; line-height: 1.25; text-decoration: none; white-space: nowrap; transition: color .15s ease, background-color .15s ease; }
+    .secondary-nav a:hover, .secondary-nav a:focus-visible { background: #f7eded; color: var(--dav-accent); }
+    .brand-row > .container > .hidden.items-center { order: 3; }
+    .site-header #menu-toggle { order: 4; }
+    .primary-nav { order: 5; display: flex; flex: 0 0 100%; align-items: center; justify-content: space-between; gap: .25rem; margin-top: .1rem; border-top: 1px solid var(--dav-line); padding: .35rem .15rem 0; }
+    .primary-nav a, .primary-nav summary { position: relative; display: inline-flex; min-height: 40px; align-items: center; gap: .35rem; border-radius: .45rem; padding: 0 .6rem; color: #000000; font-size: 14px; font-weight: 700; text-decoration: none; white-space: nowrap; transition: color .15s ease, background-color .15s ease; cursor: pointer; list-style: none; }
+    .primary-nav summary::-webkit-details-marker { display: none; }
+    .primary-nav summary::after { display: grid; width: 1.1rem; height: 1.1rem; place-items: center; border-radius: 50%; background: #f7eded; color: var(--dav-accent); content: "+"; font-size: .85rem; line-height: 1; }
+    .primary-nav details[open] > summary::after { content: "−"; }
+    .primary-nav > a:hover, .primary-nav > a:focus-visible, .primary-nav summary:hover, .primary-nav summary:focus-visible, .primary-nav details[open] > summary { background: #f7eded; color: var(--dav-accent); }
+    .menu-dropdown { position: absolute; z-index: 60; top: calc(100% - 1px); right: 0; left: 0; max-height: min(75vh, 680px); overflow-y: auto; border: 1px solid var(--dav-line); border-top: 3px solid var(--dav-accent); border-radius: 0 0 .85rem .85rem; background: rgba(255,255,255,.99); padding: 1.25rem; box-shadow: 0 18px 38px rgba(24,22,23,.16); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+    .menu-dropdown--mega { display: grid; grid-template-columns: minmax(225px, .78fr) minmax(0, 2.22fr); align-items: stretch; gap: 1.1rem; }
+    .menu-discover-panel { position: relative; display: flex; min-width: 0; flex-direction: column; overflow: hidden; border-radius: .65rem; background: linear-gradient(145deg, #211719, #4d1b21 58%, #811923); padding: 1.1rem; color: #fff; }
+    .menu-discover-panel::after { position: absolute; right: -3rem; bottom: 1.6rem; width: 12rem; height: 12rem; border: 1px solid rgba(255,255,255,.12); border-radius: 50%; box-shadow: 0 0 0 1.1rem rgba(255,255,255,.035), 0 0 0 2.2rem rgba(255,255,255,.025); content: ""; pointer-events: none; }
+    .menu-discover-kicker { margin: 0; color: #f2b6bb; font-size: .62rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .menu-discover-title { margin: .35rem 0 .2rem; color: #fff; font-size: 1.15rem; font-weight: 800; line-height: 1.2; }
+    .menu-discover-count { margin: 0 0 .8rem; color: rgba(255,255,255,.7); font-size: .72rem; }
+    .menu-discover-count strong { color: #fff; font-size: 1.3rem; }
+    .menu-discover-label { margin: .15rem 0 .45rem; color: rgba(255,255,255,.7); font-size: .64rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+    .menu-discover-search { width: 100%; min-height: 38px; margin-bottom: .75rem; border: 1px solid rgba(255,255,255,.45); border-radius: 999px; background: #fff; padding: .45rem .75rem; color: #292426; font-size: .74rem; }
+    .menu-level-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .45rem; }
+    .menu-level-button { position: relative; display: flex; min-height: 88px; align-items: flex-end; justify-content: space-between; gap: .3rem; overflow: hidden; border: 1px solid rgba(255,255,255,.35); border-radius: .5rem; background: #4d1b21; padding: .6rem; color: #fff; font-size: .68rem; font-weight: 700; line-height: 1.25; text-align: left; cursor: pointer; transition: border-color .15s ease, transform .15s ease; }
+    .menu-level-button img { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .25s ease; }
+    .menu-level-button::before { position: absolute; z-index: 1; inset: 0; background: linear-gradient(0deg, rgba(24,12,14,.88), rgba(24,12,14,.05) 90%); content: ""; }
+    .menu-level-button > span { position: relative; z-index: 2; }
+    .menu-level-button::after { content: "↗"; color: #f2b6bb; }
+    .menu-level-button:hover, .menu-level-button:focus-visible { transform: translateY(-1px); border-color: #fff; color: #fff; }
+    .menu-level-button:hover img, .menu-level-button:focus-visible img { transform: scale(1.06); }
+    .menu-level-button[aria-current="page"] { border-color: #fff; box-shadow: 0 0 0 2px rgba(255,255,255,.2); }
+    .menu-discover-foot { position: relative; z-index: 1; margin-top: auto; padding-top: 1rem; color: rgba(255,255,255,.78); font-size: .72rem; line-height: 1.5; }
+    .menu-discover-foot strong { display: block; margin-bottom: .15rem; color: #fff; font-size: .9rem; }
+    .menu-category-grid { display: grid; min-width: 0; grid-template-columns: repeat(3, minmax(0, 1fr)); align-content: start; gap: 1rem 1.2rem; }
+    .menu-category { min-width: 0; }
+    .menu-category h3 { margin: 0 0 .45rem; color: var(--dav-accent); font-size: .66rem; font-weight: 800; letter-spacing: .08em; line-height: 1.4; text-transform: uppercase; }
+    .menu-category ul, .menu-dropdown--single ul { display: grid; gap: .12rem; margin: 0; padding: 0; list-style: none; }
+    .menu-category a, .menu-dropdown--single a { display: block; min-height: 0; padding: .32rem .4rem; border-radius: .35rem; color: #454044; font-size: .72rem; font-weight: 500; line-height: 1.4; white-space: normal; }
+    .menu-category li[hidden], .menu-category h3[hidden], .menu-category ul[hidden], .menu-category[hidden] { display: none !important; }
+    .menu-category a:hover, .menu-dropdown--single a:hover { background: #f7eded; color: var(--dav-accent); }
+    .menu-category a::after, .menu-dropdown--single a::after { display: none; }
+    .menu-dropdown--single { left: auto; width: min(22rem, 90vw); }
+    .menu-download { color: #811923 !important; font-weight: 700 !important; }
+    .menu-toggle-icon { display: none; }
+    .admissions-link { display: inline-flex; min-height: 42px; align-items: center; justify-content: center; gap: .5rem; border-radius: .4rem; background: var(--dav-accent); padding: 0 1.1rem; color: #fff; font-size: .76rem; font-weight: 700; text-decoration: none; white-space: nowrap; box-shadow: 0 3px 9px rgba(165,31,43,.16); transition: background-color .15s ease, box-shadow .15s ease, transform .15s ease; }
+    .admissions-link:hover, .admissions-link:focus-visible { transform: translateY(-1px); background: #811923; color: #fff; box-shadow: 0 5px 14px rgba(165,31,43,.22); }
+    .about-photo { min-height: 320px; isolation: isolate; background: #191919; box-shadow: 0 18px 40px rgba(25,25,25,.11); }
+    .about-photo::after { position: absolute; z-index: 1; inset: 0; background: linear-gradient(180deg, rgba(25,25,25,.02) 30%, rgba(25,25,25,.78) 100%); content: ""; pointer-events: none; }
+    .about-photo img { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 55%; }
+    .about-highlight-card { position: absolute; z-index: 2; right: 1rem; bottom: 1.1rem; width: 42%; border-left: 3px solid #000; border-radius: .65rem; background: #811923; padding: .85rem; color: #fff; box-shadow: 0 10px 28px rgba(24,22,23,.22); }
+    .about-highlight-card p { margin: 0; color: rgba(255,255,255,.8); font-size: .7rem; line-height: 1.45; }
+    .about-highlight-card strong { display: block; margin-bottom: .3rem; color: #fff; font-family: "Manrope", sans-serif; font-size: .95rem; line-height: 1.25; }
+    .about-highlight-card a { display: inline-flex; align-items: center; gap: .3rem; margin-top: .5rem; color: #fff; font-size: .68rem; font-weight: 700; text-decoration: none; }
+    .about-highlight-card a:hover { color: #ffe08a; }
+    .hero-photo {
+      border: 1px solid rgba(25,25,25,.08);
+      border-radius: 1.1rem;
+      box-shadow: 0 18px 45px rgba(25,25,25,.13);
+      isolation: isolate;
+    }
+    .hero-video { position: absolute; z-index: -1; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .hero-photo::before { position: absolute; z-index: 0; inset: 0; background: linear-gradient(90deg, rgba(25,25,25,.56) 0%, rgba(25,25,25,.38) 48%, rgba(25,25,25,.08) 100%); content: ""; pointer-events: none; }
+    #main-heading { line-height: 1.2 !important; }
+    .hero-photo .bs-btn { border-radius: .55rem; }
+    .hero-photo .bg-davgold { color: white; }
+    .hero-photo .bg-davgold:hover, .hero-photo .bg-davgold:focus-visible { color: var(--dav-ink); }
+    .hero-photo a[href="#academics"].bs-btn:hover, .hero-photo a[href="#academics"].bs-btn:focus-visible { background-color: #fff !important; color: var(--dav-ink) !important; -webkit-text-fill-color: var(--dav-ink); filter: none; }
+    .bs-btn { font-weight: 700; transition: transform .18s ease, filter .18s ease; }
+    .bs-btn:hover { transform: translateY(-1px); filter: brightness(.94); }
+    .hero-kicker { width: fit-content; border: 1px solid rgba(255,255,255,.2); border-radius: .5rem; background: rgba(25,25,25,.38); padding: .55rem .85rem; backdrop-filter: blur(8px); }
+    .hero-stat { position: relative; }
+    .hero-stat:first-child::before { position: absolute; top: -1.35rem; left: 0; width: 2rem; height: 3px; background: var(--dav-accent); content: ""; }
+    .section-heading { position: relative; }
+    .section-heading::after { display: block; width: 2.75rem; height: 3px; margin-top: 1rem; background: var(--dav-accent); content: ""; }
+    .academic-stage { position: relative; overflow: hidden; background: linear-gradient(145deg, #faf8f8, #f3eeee); }
+    .program-card { position: relative; overflow: hidden; border: 1px solid rgba(25,25,25,.08); border-top: 3px solid var(--dav-accent); border-radius: .9rem; box-shadow: 0 8px 24px rgba(24,22,23,.045); transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+    .program-card:hover, .program-card:focus-within { transform: translateY(-5px); border-color: rgba(129,25,35,.25); box-shadow: 0 18px 35px rgba(24,22,23,.11); }
+    .experience-card { border-radius: .9rem; border-top: 3px solid rgba(129,25,35,.65) !important; box-shadow: 0 8px 24px rgba(25,25,25,.05); transition: transform .22s ease, box-shadow .22s ease; }
+    .experience-card:hover, .experience-card:focus-within { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(25,25,25,.1); }
+    .campus-photo { border: 4px solid white; box-shadow: 0 14px 34px rgba(25,25,25,.10); transition: box-shadow .2s ease, transform .2s ease; }
+    .campus-photo:hover { transform: translateY(-3px); box-shadow: 0 20px 42px rgba(25,25,25,.16); }
+    .student-life-section { position: relative; overflow: hidden; background: linear-gradient(145deg, #faf8f8, #f2eded); }
+    .life-card { border: 1px solid rgba(25,25,25,.07); border-radius: .9rem; box-shadow: 0 8px 24px rgba(25,25,25,.05); transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+    .life-card:hover, .life-card:focus-within { transform: translateY(-4px); border-color: rgba(129,25,35,.25); box-shadow: 0 16px 32px rgba(25,25,25,.1); }
+    .admission-step { position: relative; overflow: hidden; border-radius: .9rem; transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+    .admission-step:hover, .admission-step:focus-within { transform: translateY(-4px); border-color: rgba(129,25,35,.35); box-shadow: 0 16px 32px rgba(25,25,25,.1); }
+    .admission-step::after { position: absolute; right: -1.4rem; bottom: -2.5rem; width: 7rem; height: 7rem; border: 1px solid rgba(165,31,43,.14); border-radius: 50%; box-shadow: 0 0 0 12px rgba(165,31,43,.025), 0 0 0 24px rgba(25,25,25,.02); content: ""; pointer-events: none; }
+    .cta-panel { background: #811923; box-shadow: 0 16px 38px rgba(25,25,25,.13); }
+    .program-index { display: grid; width: 2.5rem; height: 2.5rem; place-items: center; border-radius: .65rem; background: #f7eded; color: var(--dav-accent); font-size: .75rem; font-weight: 800; letter-spacing: .04em; }
+    .program-card .program-eyebrow { color: var(--dav-accent); }
+    .filter-button { border-color: #ded9d9; background: #fff; }
+    .filter-button:hover { border-color: var(--dav-accent); color: var(--dav-accent); }
+    #program-search { border-color: #ded9d9; box-shadow: 0 2px 8px rgba(24,22,23,.025); }
+    .program-card, .experience-card, .life-card, .admission-step { background-color: #fff; border-color: var(--dav-line); }
+    .program-card { min-height: 16rem; }
+    .experience-card, .life-card, .admission-step { box-shadow: 0 5px 22px rgba(24,22,23,.045); }
+    #programmes-showcase { padding-block: 3.5rem; }
+    .programs-showcase { padding: 0 .75rem; background: #fff; }
+    .programs-showcase-panel { width: 100%; max-width: 1320px; margin-inline: auto; color: #fff; }
+    .showcase-top-panel { position: relative; z-index: 1; height: 184px; border-radius: 1.5rem 1.5rem 4.75rem 4.75rem; background: #811923; }
+    .programs-showcase-heading { padding: 1.5rem 1.5rem 0; text-align: center; }
+    .programs-showcase-heading p { margin: 0; color: #f3c66b; font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .programs-showcase-heading h2 { margin: .65rem 0 0; color: #fff; font-size: clamp(1.65rem, 2.5vw, 2.2rem); font-weight: 700; letter-spacing: -.03em; }
+    .showcase-levels { position: absolute; z-index: 3; top: 108px; right: 4%; left: 4%; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin: 0; }
+    .showcase-level-card { position: relative; display: flex; min-height: 142px; align-items: flex-end; overflow: hidden; border: 5px solid #fff; border-radius: 0; background: #54151d; color: #fff; text-decoration: none; box-shadow: 0 8px 18px rgba(24,10,12,.2); }
+    .showcase-level-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+    .showcase-level-card::after { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(17,10,12,.9), rgba(17,10,12,0) 75%); content: ""; }
+    .showcase-level-card span { position: relative; z-index: 1; width: 100%; padding: .8rem .45rem; color: #fff; font-family: "Manrope", sans-serif; font-size: 1.05rem; font-weight: 800; text-align: center; }
+    .showcase-level-card:hover, .showcase-level-card:focus-visible { color: #fff; }
+    .showcase-level-card:hover img, .showcase-level-card:focus-visible img { transform: scale(1.06); }
+    .showcase-lower-panel { position: relative; margin-top: .5rem; border-radius: 4.5rem 4.5rem 1rem 1rem; background: #811923; padding-top: 3.25rem; }
+    .showcase-details { display: grid; grid-template-columns: minmax(150px, .65fr) minmax(0, 4fr); gap: 1.5rem; padding: 1rem 2rem 1.1rem; }
+    .showcase-stat { display: flex; flex-direction: column; justify-content: center; border-left: 3px solid #f3c66b; padding-left: 1rem; }
+    .showcase-stat strong { color: #f3c66b; font-family: "Manrope", sans-serif; font-size: clamp(2.25rem, 4vw, 3rem); font-weight: 700; line-height: 1; }
+    .showcase-stat span { max-width: 11rem; margin-top: .65rem; color: rgba(255,255,255,.85); font-size: .88rem; line-height: 1.5; }
+    .showcase-faculties > p { margin: 0 0 .55rem; color: #f3c66b; font-size: .78rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .showcase-faculty-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .2rem 1rem; }
+    .showcase-faculty-grid a { display: flex; min-height: 38px; align-items: center; border-bottom: 1px solid rgba(255,255,255,.25); color: rgba(255,255,255,.96); font-size: .82rem; font-weight: 600; line-height: 1.35; text-decoration: none; transition: color .15s ease, border-color .15s ease; }
+    .showcase-faculty-grid a:hover, .showcase-faculty-grid a:focus-visible { border-color: #f3c66b; color: #f3c66b; }
+    .showcase-bottom-bar { display: grid; grid-template-columns: auto repeat(3, minmax(0, 1fr)) auto; align-items: center; gap: 1rem; border-top: 1px solid rgba(255,255,255,.22); padding: .9rem 2rem 1rem; }
+    .showcase-bottom-bar strong { color: #f3c66b; font-size: .88rem; letter-spacing: .04em; white-space: nowrap; }
+    .showcase-bottom-bar a:not(.showcase-apply) { border-bottom: 1px solid rgba(255,255,255,.25); padding: .4rem 0; color: rgba(255,255,255,.94); font-size: .8rem; font-weight: 600; text-decoration: none; }
+    .showcase-bottom-bar a:not(.showcase-apply):hover { border-color: #f3c66b; color: #f3c66b; }
+    .showcase-apply { display: inline-flex; min-height: 2.75rem; align-items: center; justify-content: center; border-radius: .5rem; background: #f3c66b; padding: .55rem 1.5rem; color: #2a1a1b; font-size: .85rem; font-weight: 800; text-decoration: none; white-space: nowrap; transition: background .15s ease, transform .15s ease; }
+    .showcase-apply:hover, .showcase-apply:focus-visible { transform: translateY(-1px); background: #ffda83; color: #2a1a1b; }
+    #nep { position: relative; background: linear-gradient(145deg, #f7f4f4, #efebeb); padding-block: 1.5rem 5.25rem; }
+    .nep-feature { position: relative; display: flex; min-height: 100%; flex-direction: column; overflow: hidden; border: 1px solid #e8e1e1; border-radius: 1.1rem; background: #fff; box-shadow: 0 18px 42px rgba(24,22,23,.055); }
+    .nep-feature::after { position: absolute; right: 1.3rem; bottom: -4.5rem; width: 15rem; height: 15rem; border: 1px solid rgba(165,31,43,.08); border-radius: 50%; box-shadow: 0 0 0 1.2rem rgba(165,31,43,.025), 0 0 0 2.4rem rgba(165,31,43,.018); content: ""; pointer-events: none; }
+    .nep-feature-heading { position: relative; z-index: 1; }
+    .nep-year { position: absolute; top: -.2rem; right: 0; color: rgba(165,31,43,.09); font-family: "Manrope", sans-serif; font-size: clamp(4rem, 7vw, 6.5rem); font-weight: 800; letter-spacing: -.09em; line-height: .78; pointer-events: none; }
+    #nep .nep-feature > p { margin-top: 1rem !important; }
+    .nep-kicker { color: var(--dav-accent); letter-spacing: .16em; }
+    .nep-highlight { border-left: 3px solid var(--dav-accent); }
+    .nep-aside { overflow: hidden; border: 1px solid rgba(255,255,255,.14); border-radius: 1.1rem; background: rgba(33,30,31,.84); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 18px 42px rgba(24,22,23,.16); }
+    .nep-aside-title { border-bottom: 1px solid rgba(255,255,255,.13); }
+    .nep-enquiry-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; padding: 1rem 1.15rem; }
+    #nep-enquiry-form { scroll-margin-top: 8.5rem; }
+    .nep-enquiry-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; padding: 1rem 1.15rem; }
+    .nep-enquiry-field { min-width: 0; }
+    .nep-enquiry-field--full { grid-column: 1 / -1; }
+    .nep-enquiry-field label { display: block; margin-bottom: .25rem; color: rgba(255,255,255,.72); font-size: .68rem; font-weight: 600; }
+    .nep-enquiry-field input, .nep-enquiry-field select { width: 100%; min-height: 2.55rem; border: 1px solid rgba(255,255,255,.2); border-radius: .45rem; background: rgba(255,255,255,.09); padding: .5rem .65rem; color: #fff; font: inherit; font-size: .76rem; }
+    .nep-enquiry-field input::placeholder { color: rgba(255,255,255,.5); }
+    .nep-enquiry-field input:disabled { color: rgba(255,255,255,.5); cursor: not-allowed; }
+    .nep-enquiry-field select option { color: #181617; }
+    .nep-enquiry-field input:focus, .nep-enquiry-field select:focus { border-color: #f0a4aa; outline: 2px solid rgba(240,164,170,.35); outline-offset: 1px; }
+    .nep-enquiry-consent { display: flex; align-items: flex-start; gap: .5rem; color: rgba(255,255,255,.7); font-size: .67rem; line-height: 1.45; }
+    .nep-enquiry-consent input { flex: 0 0 auto; margin-top: .15rem; accent-color: var(--dav-accent); }
+    .nep-enquiry-note { grid-column: 1 / -1; margin: 0; color: rgba(255,255,255,.58); font-size: .64rem; line-height: 1.45; }
+    .nep-enquiry-submit { grid-column: 1 / -1; display: flex; min-height: 2.75rem; align-items: center; justify-content: space-between; gap: .75rem; border-radius: .55rem; background: var(--dav-accent); padding: .7rem .9rem; color: #fff; font-size: .82rem; font-weight: 700; text-decoration: none; transition: background .16s ease; }
+    .nep-enquiry-submit:hover { background: #811923; color: #fff; }
+    .sticky-admissions-tab { position: fixed; z-index: 40; top: 50%; right: 0; display: inline-flex; align-items: center; gap: .55rem; transform: translateY(-50%); border: 1px solid rgba(255,255,255,.38); border-right: 0; border-radius: .7rem 0 0 .7rem; background: rgba(129,25,35,.94); padding: .9rem .65rem; color: #fff; font-size: .78rem; font-weight: 700; text-decoration: none; writing-mode: vertical-rl; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: 0 6px 20px rgba(24,22,23,.2); transition: background .16s ease, transform .16s ease; }
+    .sticky-admissions-tab:hover { transform: translateY(-50%) translateX(-3px); background: #a51f2b; color: #fff; }
+    .sticky-admissions-tab:focus-visible { outline: 3px solid #f0a4aa; outline-offset: -4px; }
+    .sticky-admissions-tab span:last-child { font-size: .95rem; }
+    .fixed-contact-actions { position: fixed; z-index: 44; right: 1rem; bottom: 1.25rem; display: flex; flex-direction: column; gap: .7rem; }
+    .fixed-contact-action { display: grid; width: 3.25rem; height: 3.25rem; place-items: center; border: 2px solid #fff; border-radius: 50%; color: #fff; box-shadow: 0 5px 18px rgba(24,22,23,.24); transition: transform .18s ease, box-shadow .18s ease; }
+    .fixed-contact-action:hover, .fixed-contact-action:focus-visible { transform: translateY(-2px) scale(1.04); color: #fff; box-shadow: 0 8px 22px rgba(24,22,23,.3); }
+    .fixed-contact-action--phone { background: #811923; }
+    .fixed-contact-action--whatsapp { background: #1fae62; }
+    .fixed-contact-action svg { width: 1.45rem; height: 1.45rem; }
+    .mobile-quick-nav { display: none; }
+    @media (min-width: 1200px) {
+      #nep .nep-sticky-aside { position: sticky; top: 8.25rem; align-self: flex-start; }
+    }
+    #experience, #about { background: #fff; }
+    #campus { background: linear-gradient(160deg, #f8f6f6, #f0ecec); }
+    #student-life { background: transparent; }
+    #admissions { background-image: linear-gradient(rgba(0,0,0,.62), rgba(0,0,0,.62)), url("https://davuniversity.org/src2/img/new/dav-university-3.jpg"); background-attachment: fixed; background-position: center; background-size: cover; }
+    #admissions > .container > .mx-auto > .section-kicker,
+    #admissions > .container > .mx-auto > h2,
+    #admissions > .container > .mx-auto > p { color: #fff !important; }
+    #admissions > .container > .mx-auto > p { color: rgba(255,255,255,.86) !important; }
+    .campus-photo { border-radius: 1rem; }
+    .life-card.bg-davgreen { background: var(--dav-accent); }
+    .admission-step { border-top: 2px solid var(--dav-accent); }
+    .admission-step::after { opacity: .55; }
+    #notices { background: linear-gradient(180deg, #fff, #fbf9f9); }
+    #notices article { margin-bottom: .8rem; border: 1px solid var(--dav-line); border-radius: .85rem; background: #fff; padding: 1rem 1.15rem; transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease; }
+    #notices article:hover { transform: translateY(-2px); border-color: rgba(129,25,35,.25); box-shadow: 0 10px 24px rgba(24,22,23,.07); }
+    footer { margin-top: 0 !important; background: #181617; }
+    .cta-panel { border-left: 5px solid #000; border-radius: .9rem; }
+    .cta-panel .bg-davgold { background: #000; color: #fff; }
+    #admissions-cta { background-color: #000 !important; color: #fff !important; -webkit-text-fill-color: #fff; }
+    #admissions-cta:hover, #admissions-cta:focus-visible { background-color: #181617 !important; color: #fff !important; -webkit-text-fill-color: #fff; }
+    .hero-kicker, .cta-panel .section-kicker { color: #fff; }
+    .campus-photo .section-kicker { color: #f0a4aa; }
+    .about-photo .section-kicker, footer .text-davgold { color: #f0a4aa; }
+    .admission-step::after { display: none; }
+    #experience .experience-card > span { width: auto; height: auto; place-items: start; border-radius: 0; background: transparent; color: var(--dav-accent); font-size: .75rem; font-weight: 800; letter-spacing: .08em; }
+    #notices article { padding-inline: 1rem; }
+    #notices article > div > span { background: #f7eded; color: var(--dav-accent); }
+    .program-card {
+      isolation: isolate;
+      display: flex;
+      min-height: 18rem;
+      flex-direction: column;
+      border: 1px solid var(--dav-line);
+      border-radius: 1rem;
+      box-shadow: 0 8px 24px rgba(24,22,23,.035);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, color .2s ease;
+    }
+    .program-wrap:nth-child(1) .program-card:hover, .program-wrap:nth-child(1) .program-card:focus-within,
+    .program-wrap:nth-child(3) .program-card:hover, .program-wrap:nth-child(3) .program-card:focus-within,
+    .program-wrap:nth-child(5) .program-card:hover, .program-wrap:nth-child(5) .program-card:focus-within { background-image: linear-gradient(0deg, rgba(19,12,14,.91), rgba(19,12,14,.4)), url("https://davuniversity.org/src2/img/new/dav-university-3.jpg"); background-position: center; background-size: cover; }
+    .program-wrap:nth-child(2) .program-card:hover, .program-wrap:nth-child(2) .program-card:focus-within,
+    .program-wrap:nth-child(4) .program-card:hover, .program-wrap:nth-child(4) .program-card:focus-within,
+    .program-wrap:nth-child(6) .program-card:hover, .program-wrap:nth-child(6) .program-card:focus-within { background-image: linear-gradient(0deg, rgba(19,12,14,.91), rgba(19,12,14,.4)), url("https://davuniversity.org/src2/img/new/dav-university-2.jpg"); background-position: center; background-size: cover; }
+    .program-card:hover, .program-card:focus-within { transform: translateY(-4px); border-color: rgba(129,25,35,.55); color: #fff; box-shadow: 0 16px 34px rgba(24,22,23,.18); }
+    .program-card:hover .program-index, .program-card:focus-within .program-index { border-color: rgba(255,255,255,.55); background: rgba(255,255,255,.14); color: #fff; }
+    .program-card:hover .section-kicker, .program-card:focus-within .section-kicker { color: #ffd3d6 !important; }
+    .program-card:hover h3, .program-card:focus-within h3,
+    .program-card:hover p:not(.section-kicker), .program-card:focus-within p:not(.section-kicker),
+    .program-card:hover > a, .program-card:focus-within > a { color: #fff !important; }
+    .program-card > div:first-child { min-height: 2.5rem; justify-content: flex-end; }
+    .program-card .program-index { border: 1px solid #f0dfe0; border-radius: 999px; background: #fbf5f5; }
+    .program-card > a { margin-top: auto !important; padding-top: 1.25rem; color: var(--dav-accent); }
+    .experience-card { position: relative; overflow: hidden; border: 1px solid var(--dav-line); border-radius: 1rem; }
+    #experience .experience-card > span { display: inline-flex; border-radius: 999px; background: #f7eded; padding: .4rem .65rem; letter-spacing: .08em; }
+    #experience .col-md-4:nth-child(2) .experience-card { border-color: var(--dav-ink) !important; background-color: var(--dav-ink) !important; color: white; }
+    #experience .col-md-4:nth-child(2) .experience-card h3 { color: white !important; }
+    #experience .col-md-4:nth-child(2) .experience-card p { color: rgba(255,255,255,.68) !important; }
+    #experience .col-md-4:nth-child(2) .experience-card > span { background: rgba(255,255,255,.1) !important; color: #f0a4aa !important; }
+    #admissions .admission-step { border: 1px solid var(--dav-line) !important; border-left: 3px solid var(--dav-accent) !important; border-radius: 1rem; padding: 1.75rem !important; }
+    #admissions .admission-step > span { display: inline-flex; border-radius: .45rem; background: #f7eded; padding: .4rem .65rem; color: var(--dav-accent) !important; font-size: .7rem; letter-spacing: .1em; }
+    #admissions .admission-step > a { color: var(--dav-accent); }
+    #admissions .admission-step:hover { border-color: rgba(165,31,43,.3); box-shadow: 0 14px 32px rgba(24,22,23,.08); }
+    @media (min-width: 992px) {
+      main > section[id] { padding-block: 5.25rem; }
+      #about { padding-block: 4.75rem; }
+      #student-life { padding-block: 5rem; }
+    }
+    @media (max-width: 767.98px) {
+      main > section[id] { padding-block: 3.75rem; }
+      #nep { padding-top: 1rem; }
+      #main-heading { font-size: 20px !important; }
+      .hero-photo { border-radius: .9rem; }
+      .hero-kicker { max-width: 100%; font-size: 9px; }
+      .program-card { min-height: 0; }
+      .nep-feature, .nep-aside { border-radius: .85rem; }
+      .nep-year { font-size: 4rem; }
+    }
+    @media (min-width: 992px) {
+      .hero-photo, .hero-photo .container { min-height: 500px; }
+      .hero-photo .container { padding-block: 1.5rem !important; }
+      .hero-photo #main-heading { margin-top: 1rem !important; }
+      .hero-photo #main-heading + p { margin-top: 1rem !important; }
+      .hero-photo #main-heading + p + div { margin-top: 1.25rem !important; }
+      .hero-photo #main-heading + p + div + p { margin-top: 1.25rem !important; }
+      .hero-photo .container > .mt-8.grid { margin-top: 1.5rem !important; padding-top: 1rem; }
+    }
+    @media (max-width: 1279.98px) {
+      .secondary-nav { display: none; }
+      .primary-nav { display: none; }
+      .primary-nav.mobile-menu-open { position: absolute; z-index: 60; top: 100%; right: -.75rem; left: -.75rem; display: flex; width: auto; max-height: calc(100vh - 110px); overflow-y: auto; flex: initial; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0; margin-top: 0; border: 1px solid var(--dav-line); border-top: 3px solid var(--dav-accent); border-radius: 0 0 .85rem .85rem; background: #fff; padding: .5rem 1rem 1rem; box-shadow: 0 18px 30px rgba(24,22,23,.15); }
+      .primary-nav.mobile-menu-open > a, .primary-nav.mobile-menu-open > details > summary { width: 100%; justify-content: space-between; border-bottom: 1px solid var(--dav-line); border-radius: 0; padding: 0 .45rem; font-size: .84rem; }
+      .primary-nav.mobile-menu-open > details { width: 100%; }
+      .primary-nav.mobile-menu-open .menu-dropdown { position: static; width: 100%; max-height: none; overflow: visible; border: 0; border-top: 0; border-radius: 0; background: #faf8f8; padding: .75rem; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
+      .primary-nav.mobile-menu-open .menu-dropdown--mega { grid-template-columns: 1fr; gap: .85rem; }
+      .primary-nav.mobile-menu-open .menu-discover-panel { padding: .85rem; }
+      .primary-nav.mobile-menu-open .menu-level-button { min-height: 44px; }
+      .primary-nav.mobile-menu-open .menu-category-grid { grid-template-columns: 1fr; gap: .85rem; }
+      .primary-nav.mobile-menu-open .menu-category h3 { font-size: .67rem; }
+      .primary-nav.mobile-menu-open .menu-category a, .primary-nav.mobile-menu-open .menu-dropdown--single a { padding: .35rem .45rem; font-size: .77rem; }
+      .brand-row { min-height: 74px; }
+      .brand-logo { height: 44px; }
+    }
+    @media (min-width: 1280px) {
+      .site-header #menu-toggle { display: none; }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      .showcase-details { grid-template-columns: minmax(130px, .7fr) minmax(0, 3fr); }
+      .showcase-faculty-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .showcase-faculty-grid a { min-height: 40px; }
+      .showcase-bottom-bar { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem 1rem; }
+      .showcase-bottom-bar strong { grid-column: 1 / -1; }
+    }
+    @media (max-width: 767.98px) {
+      #programmes-showcase { padding: 1.5rem .5rem 2.25rem; }
+      .programs-showcase { padding-block: .5rem 1.5rem; }
+      .showcase-top-panel { height: auto; min-height: 0; border-radius: 1.15rem 1.15rem 3.5rem 3.5rem; padding-bottom: 1.25rem; }
+      .programs-showcase-heading { padding: 1.75rem 1rem 1.25rem; }
+      .programs-showcase-heading p { font-size: .8rem; }
+      .programs-showcase-heading h2 { font-size: clamp(1.55rem, 6vw, 1.8rem); line-height: 1.2; }
+      .showcase-levels { position: relative; top: auto; right: auto; left: auto; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; margin: .35rem 1rem 0; transform: none; }
+      .showcase-level-card { min-height: 140px; border-width: 3px; }
+      .showcase-level-card span { padding: .75rem .35rem; font-size: .95rem; }
+      .showcase-lower-panel { margin-top: .85rem; border-radius: 3.5rem 3.5rem 1.15rem 1.15rem; padding-top: 1.65rem; }
+      .showcase-details { grid-template-columns: 1fr; gap: 1.25rem; padding: 1.15rem 1.35rem 1.4rem; }
+      .showcase-stat { min-height: 98px; }
+      .showcase-stat strong { font-size: 2.65rem; }
+      .showcase-stat span { max-width: 16rem; font-size: .92rem; }
+      .showcase-faculties > p { margin-bottom: .6rem; font-size: .82rem; }
+      .showcase-faculty-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .35rem .85rem; }
+      .showcase-faculty-grid a { min-height: 42px; font-size: .82rem; line-height: 1.35; }
+      .showcase-bottom-bar { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem 1rem; padding: 1.25rem 1.35rem 1.4rem; }
+      .showcase-bottom-bar strong { grid-column: 1 / -1; }
+      .showcase-bottom-bar a:not(.showcase-apply) { min-height: 2.5rem; align-content: center; font-size: .82rem; }
+      .showcase-apply { min-height: 2.75rem; align-self: center; padding-inline: .9rem; font-size: .82rem; }
+      .programs-showcase-panel { border-radius: 1.15rem; }
+      .showcase-lower-panel { border-radius: 3.5rem 3.5rem 1.15rem 1.15rem; }
+      .fixed-contact-actions { right: .7rem; bottom: calc(5rem + env(safe-area-inset-bottom)); gap: .55rem; }
+      .fixed-contact-action { width: 2.9rem; height: 2.9rem; }
+      .fixed-contact-action svg { width: 1.3rem; height: 1.3rem; }
+      body { padding-bottom: calc(4.5rem + env(safe-area-inset-bottom)); }
+      .mobile-quick-nav { position: fixed; z-index: 45; right: .65rem; bottom: calc(.55rem + env(safe-area-inset-bottom)); left: .65rem; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .15rem; border: 1px solid rgba(129,25,35,.12); border-radius: 999px; background: rgba(255,255,255,.88); padding: .32rem; box-shadow: 0 8px 28px rgba(24,22,23,.18); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); }
+      .mobile-quick-nav a, .mobile-quick-nav button { display: flex; min-width: 0; min-height: 3.2rem; flex-direction: column; align-items: center; justify-content: center; gap: .15rem; border: 0; border-radius: 999px; background: transparent; padding: .3rem .1rem; color: #811923; font: inherit; text-decoration: none; cursor: pointer; }
+      .mobile-quick-nav a:hover, .mobile-quick-nav button:hover { background: #f7eded; color: #811923; }
+      .mobile-quick-nav svg { width: 1.1rem; height: 1.1rem; }
+      .mobile-quick-nav span { overflow: hidden; max-width: 100%; font-size: .58rem; font-weight: 700; line-height: 1.1; text-overflow: ellipsis; white-space: nowrap; }
+      #quick-call-action span { overflow: visible; font-size: .52rem; line-height: 1.05; text-overflow: clip; white-space: normal; }
+      .utility-bar { min-height: 28px; font-size: .62rem; }
+      .brand-row { min-height: 68px; }
+      .brand-logo { height: 40px; }
+      .brand-name { font-size: .95rem; }
+      .primary-nav.mobile-menu-open { right: -.75rem; left: -.75rem; }
+      .secondary-nav a { padding: .3rem .4rem; font-size: .7rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .hero-video { display: none; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+      .utility-marquee { overflow-x: auto; }
+      .utility-marquee-track { animation: none; }
+      .utility-marquee-group[aria-hidden="true"] { display: none; }
+      .news-marquee-window { height: auto; overflow: visible; }
+      .news-marquee-track { animation: none; }
+      .news-marquee-list { flex-basis: auto; min-height: 16rem; }
+      .news-marquee-list[aria-hidden="true"] { display: none; }
+    }
+  </style>
+</head>
+<body class="antialiased">
+  <header class="site-header sticky top-0 z-50 bg-white">
+    <div class="utility-bar">
+      <div class="container min-h-[32px]">
+        <div class="utility-marquee flex min-h-[32px] items-center text-[13px] font-medium" aria-label="DAV University contact information">
+          <div class="utility-marquee-track">
+            <div class="utility-marquee-group">
+              <span>DAV University <span class="utility-marquee-separator" aria-hidden="true">|</span> Jalandhar, Punjab</span>
+              <a href="tel:18001800190">Toll free <strong class="ml-1">1800-1800-190</strong></a>
+              <a href="tel:+917087017551">Admissions <strong class="ml-1">070870-17551</strong></a>
+              <a href="https://wa.me/918264911134">WhatsApp <strong class="ml-1">82649 11134</strong></a>
+            </div>
+            <div class="utility-marquee-group" aria-hidden="true">
+              <span>DAV University <span class="utility-marquee-separator" aria-hidden="true">|</span> Jalandhar, Punjab</span>
+              <a href="tel:18001800190" tabindex="-1">Toll free <strong class="ml-1">1800-1800-190</strong></a>
+              <a href="tel:+917087017551" tabindex="-1">Admissions <strong class="ml-1">070870-17551</strong></a>
+              <a href="https://wa.me/918264911134" tabindex="-1">WhatsApp <strong class="ml-1">82649 11134</strong></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="brand-row border-b border-dav/10 bg-white">
+      <div class="container flex h-full items-center justify-between gap-4 py-2">
+        <a href="#top" class="flex min-w-0 shrink-0 items-center gap-3 text-dav no-underline" aria-label="DAV University home">
+          <img src="dav-university-logo.png" alt="" class="brand-logo object-contain">
+          <span class="min-w-0 leading-tight">
+            <span class="brand-name block whitespace-nowrap"><span>DAV</span> UNIVERSITY</span>
+            <span class="mt-1 block text-[9px] font-semibold uppercase tracking-[.16em] text-dav/55">Jalandhar · Punjab</span>
+          </span>
+        </a>
+        <nav class="secondary-nav" aria-label="Quick links">
+          <a href="https://davuniversity.org/">Home</a>
+          <a href="https://alumni.davuniversity.org/">Alumni</a>
+          <a href="https://davuniversity.org/iqac">IQAC</a>
+          <a href="https://davuniversity.org/innerpage/nep.aspx">NEP</a>
+          <a href="https://davuniversity.org/news">News</a>
+          <a href="https://davuniversity.org/innerpage/events-dav">Events</a>
+          <a href="https://davuniversity.org/uni/fee-payment">Fee Payment</a>
+          <a href="https://davuniversity.org/uni/notices">Notices</a>
+          <a href="https://davuniversity.org/uni/jobs-and-career">Jobs &amp; Career</a>
+          <a href="https://davuniversity.org/library/knowledge-resource-centre-library">Library</a>
+          <a href="https://www.davupay.com/frmViewStudentResult.aspx">Result</a>
+          <a href="https://davuniversity.org/ncc/">NCC</a>
+          <a href="https://davuniversity.org/nss/">NSS</a>
+        </nav>
+        <nav id="site-navigation" class="primary-nav" aria-label="Main navigation">
+          <a href="https://davuniversity.org/university/introduction">About Us</a>
+          <details>
+            <summary>Bachelor's Programmes</summary>
+            <div class="menu-dropdown menu-dropdown--mega">
+              <section class="menu-category"><h3>Engineering &amp; Technology</h3><ul>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-technology-computer-science-and-engineering">B.Tech. (Computer Science &amp; Engineering)</a></li>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-technology-computer-science-and-artficial-intelligence">B.Tech. (Computer Science &amp; Artificial Intelligence)</a></li>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-technology-mechanical-engineering">B.Tech. (Mechanical Engineering)</a></li>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-technology-civil-engineering">B.Tech. (Civil Engineering)</a></li>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-technology-electrical-engineering">B.Tech. (Electrical Engineering)</a></li>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-technology-mechatronics-engineering">B.Tech. Mechatronics (Electric Vehicle Engineering)</a></li>
+              </ul><h3 class="mt-3">Computer Science &amp; Applications</h3><ul>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-science-computer">B.Sc. Computer Science</a></li>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-computer-applications">Bachelor of Computer Applications (BCA)</a></li>
+              </ul></section>
+              <section class="menu-category"><h3>Sciences</h3><ul>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-science-physics">B.Sc. Physics</a></li>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-science-chemistry">B.Sc. Chemistry</a></li>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-science-mathematics">B.Sc. Mathematics</a></li>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-science-botany">B.Sc. Botany</a></li>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-science-zoology">B.Sc. Zoology</a></li>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-science-microbiology">B.Sc. Microbiology</a></li>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-science-biotechnology">B.Sc. Biotechnology</a></li>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-science-food-science-and-technology">B.Sc. Food Science &amp; Technology</a></li>
+              </ul><h3 class="mt-3">Law &amp; Legal Studies</h3><ul><li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-arts-and-bachelor-of-legislative-law">B.A. LL.B. (Hons.)</a></li></ul></section>
+              <section class="menu-category"><h3>Commerce, Business &amp; Economics</h3><ul>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-commerce/">B.Com.</a></li>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-business-administration">Bachelor of Business Administration (BBA)</a></li>
+                <li><a href="https://davuniversity.org/innerpage/bba-logistics-supply-chain-management">BBA (Logistics &amp; Supply Chain Management)</a></li>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-science-economics">B.Sc. Economics</a></li>
+              </ul><h3 class="mt-3">Education (Integrated)</h3><ul>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-arts-and-bachelor-of-education">B.A. B.Ed. (4 years)</a></li>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-science-and-bachelor-of-education">B.Sc. B.Ed. (4 years)</a></li>
+              </ul><h3 class="mt-3">Humanities &amp; Social Sciences</h3><ul>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-arts-english">B.A. English</a></li>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-science-psychology">B.Sc. Psychology</a></li>
+              </ul></section>
+              <section class="menu-category"><h3>Agriculture</h3><ul><li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-science-hons-agriculture">B.Sc. (Hons.) Agriculture</a></li></ul>
+                <h3 class="mt-3">Physical Education</h3><ul>
+                  <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-physical-education">Bachelor of Physical Education (B.P.Ed.)</a></li>
+                  <li><a href="https://davuniversity.org/innerpage/department-sports-and-physical-education">B.Sc. Health &amp; Physical Education</a></li>
+                </ul><h3 class="mt-3">Pharmaceutical &amp; Allied Health Sciences</h3><ul>
+                  <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-pharmacy">Bachelor of Pharmacy (B.Pharm.)</a></li>
+                  <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-science-medical-laboratory-technology">B.Sc. Medical Laboratory Technology (MLT)</a></li>
+                </ul><h3 class="mt-3">Journalism</h3><ul><li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-arts-in-journalism-and-mass-communication">B.A. Journalism &amp; Mass Communication</a></li></ul>
+              </section>
+            </div>
+          </details>
+          <details>
+            <summary>PG Programmes</summary>
+            <div class="menu-dropdown menu-dropdown--mega">
+              <section class="menu-category"><h3>Engineering &amp; Technology</h3><ul>
+                <li><a href="https://davuniversity.org/study-choice/master-programmes/masters-of-technology-computer-science">M.Tech. Computer Science &amp; Engineering</a></li>
+                <li><a href="https://davuniversity.org/innerpage/department-of-mechanical-engineering">M.Tech. Mechanical Engineering</a></li>
+                <li><a href="https://davuniversity.org/innerpage/department-of-electrical-engineering">M.Tech. Electrical Engineering</a></li>
+                <li><a href="https://davuniversity.org/study-choice/master-programmes/masters-of-technology-structural-engineering">M.Tech. Structural Engineering</a></li>
+              </ul><h3 class="mt-3">Computer Science &amp; Applications</h3><ul>
+                <li><a href="https://davuniversity.org/study-choice/master-programmes/masters-of-computer-applications">Master of Computer Applications (MCA)</a></li>
+                <li><a href="https://davuniversity.org/study-choice/master-programmes/masters-of-science-computer-science">M.Sc. Computer Science</a></li>
+              </ul></section>
+              <section class="menu-category"><h3>Sciences</h3><ul>
+                <li><a href="https://davuniversity.org/study-choice/master-programmes/masters-of-science-physics">M.Sc. Physics</a></li>
+                <li><a href="https://davuniversity.org/study-choice/master-programmes/masters-of-science-chemistry">M.Sc. Chemistry</a></li>
+                <li><a href="https://davuniversity.org/study-choice/master-programmes/masters-of-science-mathematics">M.Sc. Mathematics</a></li>
+                <li><a href="https://davuniversity.org/study-choice/master-programmes/masters-of-science-botany">M.Sc. Botany</a></li>
+                <li><a href="https://davuniversity.org/study-choice/master-programmes/masters-of-science-zoology">M.Sc. Zoology</a></li>
+                <li><a href="https://davuniversity.org/study-choice/master-programmes/masters-of-science-microbiology">M.Sc. Microbiology</a></li>
+                <li><a href="https://davuniversity.org/study-choice/master-programmes/masters-of-science-biotechnology">M.Sc. Biotechnology</a></li>
+                <li><a href="https://davuniversity.org/study-choice/master-programmes/masters-of-science-mathematics">M.Sc. Food Science &amp; Technology</a></li>
+              </ul><h3 class="mt-3">Humanities &amp; Social Sciences</h3><ul>
+                <li><a href="https://davuniversity.org/study-choice/master-programmes/masters-of-arts-english">M.A. English</a></li>
+                <li><a href="https://davuniversity.org/study-choice/master-programmes/masters-of-arts-psychology">M.A. Psychology</a></li>
+              </ul></section>
+              <section class="menu-category"><h3>Commerce, Business &amp; Economics</h3><ul>
+                <li><a href="https://davuniversity.org/study-choice/master-programmes/masters-of-business-administration">Master of Business Administration (MBA)</a></li>
+                <li><a href="https://davuniversity.org/study-choice/master-programmes/masters-of-commerce">Master of Commerce (M.Com.)</a></li>
+              </ul><h3 class="mt-3">Physical Education</h3><ul><li><a href="https://davuniversity.org/study-choice/master-programmes/master-of-physical-education">M.P.Ed.</a></li></ul>
+                <h3 class="mt-3">Law &amp; Legal Studies</h3><ul><li><a href="https://davuniversity.org/study-choice/master-programmes/masters-of-law">Master of Laws (LL.M.)</a></li></ul>
+              </section>
+              <section class="menu-category"><h3>Agriculture</h3><ul>
+                <li><a href="https://davuniversity.org/innerpage/department-of-agriculture">M.Sc. Agriculture (Genetics &amp; Plant Breeding)</a></li>
+                <li><a href="https://davuniversity.org/innerpage/department-of-agriculture">M.Sc. Agriculture (Plant Pathology)</a></li>
+                <li><a href="https://davuniversity.org/innerpage/department-of-agriculture">M.Sc. Agriculture Horticulture (Vegetable Science)</a></li>
+                <li><a href="https://davuniversity.org/innerpage/department-of-agriculture">M.Sc. Agriculture (Agronomy)</a></li>
+                <li><a href="https://davuniversity.org/innerpage/department-of-agriculture">M.Sc. Agriculture (Agricultural Extension &amp; Communication)</a></li>
+              </ul></section>
+            </div>
+          </details>
+          <details>
+            <summary>Industry Integrated</summary>
+            <div class="menu-dropdown menu-dropdown--mega">
+              <section class="menu-category"><h3>Engineering &amp; Technology</h3><ul>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-technology-computer-science-and-engineering-with-sap">B.Tech. CSE (Cloud ERP) with SAP</a></li>
+                <li><a class="menu-download" href="https://davuniversity.org/src/library/2025/DAV_University-SAP-Programme-Brochure.pdf" target="_blank" rel="noopener noreferrer">Download CSE with SAP brochure ↗</a></li>
+                <li><a href="https://davuniversity.org/study-choice/bachelor-programmes/bachelor-of-technology-mechatronics">B.Tech. Mechatronics (EV Engineering) with L&amp;T EduTech</a></li>
+                <li><a class="menu-download" href="https://davuniversity.org/src/library/2025/B-Tech_Mechatronics-(Electric-Vehicle-Engineering).pdf" target="_blank" rel="noopener noreferrer">Download Mechatronics brochure ↗</a></li>
+              </ul></section>
+              <section class="menu-category"><h3>Computer Science &amp; Applications</h3><ul>
+                <li><a href="#">MCA with Specialization in SAP</a></li>
+                <li><a class="menu-download" href="https://davuniversity.org/src/library/2025/DAV_University-SAP-Programme-Brochure.pdf" target="_blank" rel="noopener noreferrer">Download MCA (SAP) brochure ↗</a></li>
+              </ul></section>
+              <section class="menu-category"><h3>Commerce, Business &amp; Economics</h3><ul>
+                <li><a href="https://davuniversity.org/study-choice/co-op-programmes/bba-in-retail-management">BBA (Retail Management)</a></li>
+                <li><a class="menu-download" href="https://davuniversity.org/src/library/2025/Brochure-Maruti-and-DAV_2024.pdf" target="_blank" rel="noopener noreferrer">Download BBA Retail brochure ↗</a></li>
+                <li><a href="https://davuniversity.org/study-choice/co-op-programmes/mba-with-specialization-in-sap">MBA with Specialization in SAP</a></li>
+                <li><a class="menu-download" href="https://davuniversity.org/src/library/2025/DAV_University-SAP-Programme-Brochure.pdf" target="_blank" rel="noopener noreferrer">Download MBA SAP brochure ↗</a></li>
+              </ul></section>
+              <section class="menu-category"><h3>Collaboration with IIT Mandi</h3><ul>
+                <li><a href="#">Minor in Artificial Intelligence</a></li><li><a href="#">Minor in Data Science</a></li>
+                <li><a href="#">Minor in Business Analytics</a></li><li><a href="#">Minor in CSE and Advanced Tech</a></li>
+                <li><a class="menu-download" href="https://davuniversity.org/src/library/2025/IIT_Mandi.pdf" target="_blank" rel="noopener noreferrer">Download brochure ↗</a></li>
+              </ul></section>
+            </div>
+          </details>
+          <details>
+            <summary>Research &amp; Extension</summary>
+            <div class="menu-dropdown menu-dropdown--mega"><section class="menu-category"><h3>Research &amp; Extension</h3><ul>
+              <li><a href="https://davuniversity.org/study-choice/doctoral-programmes">Doctoral Programmes</a></li>
+              <li><a href="https://davuniversity.org/innerpage/phd-students">PhD Students</a></li>
+              <li><a href="https://davuniversity.org/innerpage/mou">MoUs</a></li>
+              <li><a href="https://davuniversity.org/innerpage/patents">Patents</a></li>
+              <li><a href="https://davuniversity.org/src/library/2025/Research-Publications-in-Scopus-indexed-journals.pdf" target="_blank" rel="noopener noreferrer">Research Publications in Scopus Database</a></li>
+              <li><a href="https://davuniversity.org/activities/" target="_blank" rel="noopener noreferrer">Extension Activities</a></li>
+              <li><a href="https://davuniversity.org/innovation-entrepreneurship/">Innovation and Entrepreneurship</a></li>
+            </ul></section></div>
+          </details>
+          <details>
+            <summary>Diploma / Short Term</summary>
+            <div class="menu-dropdown menu-dropdown--mega">
+              <section class="menu-category"><h3>Physical Education</h3><ul><li><a href="https://davuniversity.org/innerpage/short-term-programmes">Post Graduate Diploma in Yoga</a></li></ul></section>
+              <section class="menu-category"><h3>Pharmaceutical &amp; Allied Health Sciences</h3><ul><li><a href="https://davuniversity.org/study-choice/diploma-programmes/diploma-of-pharmacy">Diploma in Pharmacy (D.Pharm.)</a></li></ul></section>
+              <section class="menu-category"><h3>Psychology</h3><ul><li><a href="https://davuniversity.org/innerpage/short-term-programmes">Post Graduate Diploma in Guidance and Counselling</a></li></ul></section>
+              <section class="menu-category"><h3>Computer Science &amp; Applications</h3><ul><li><a href="https://davuniversity.org/innerpage/short-term-programmes">Post Graduate Diploma in Computer Applications (PGDCA)</a></li></ul></section>
+            </div>
+          </details>
+        </nav>
+        <div class="hidden items-center gap-3 xl:flex">
+          <a class="admissions-link" href="https://davuniversity.org/admissions/" target="_blank" rel="noopener noreferrer">Admissions <span aria-hidden="true">↗</span></a>
+        </div>
+        <button id="menu-toggle" class="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-dav/15 bg-white text-dav transition hover:border-davgold hover:text-davgold xl:hidden" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-navigation">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="px-3 pb-2 pt-4 sm:px-4 sm:pt-5 lg:px-6">
+      <div class="hero-photo relative mx-auto min-h-[560px] max-w-[1600px] overflow-hidden rounded-[1.6rem] text-white sm:min-h-[520px] lg:min-h-[500px]">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="https://davuniversity.org/src2/img/home/back1.jpg?v=4" aria-hidden="true" tabindex="-1">
+          <source src="https://davuniversity.org/src2/img/home/home.mp4" type="video/mp4">
+        </video>
+        <div class="container relative z-10 flex min-h-[560px] flex-col justify-center py-10 sm:min-h-[520px] lg:min-h-[500px]">
+          <div class="max-w-3xl">
+            <p class="hero-kicker section-kicker flex items-center gap-3 text-[10px] font-bold uppercase text-davgold sm:text-xs">
+              <span class="h-px w-8 bg-davgold"></span> DAV University · Jalandhar, Punjab
+            </p>
+            <h1 id="main-heading" tabindex="-1" class="display mt-6 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-[-.045em] sm:text-5xl lg:text-[4.5rem]">
+              Learn with purpose.<br class="hidden sm:block"> Lead with <span class="text-white">confidence.</span>
+            </h1>
+            <p class="mt-6 max-w-xl text-base leading-7 text-white/80 sm:text-lg sm:leading-8">
+              Explore academic opportunities, discover a flexible learning experience and find the right next step at DAV University.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="#academics" class="bs-btn inline-flex items-center gap-3 bg-davgold px-6 py-3.5 text-sm font-bold text-white transition hover:bg-white hover:text-dav">Explore academic areas <span aria-hidden="true">↓</span></a>
+              <a href="https://davuniversity.org/admissions/" class="bs-btn inline-flex items-center gap-2 border border-white/45 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10">Admissions information <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="mt-6 flex items-center gap-3 text-xs font-medium text-white/65">
+              <span class="h-0.5 w-8 bg-davgold" aria-hidden="true"></span>
+              A multidisciplinary university in Jalandhar, Punjab
+            </p>
+          </div>
+          <div class="mt-8 grid max-w-3xl grid-cols-3 border-t border-white/25 pt-5">
+            <a href="#academics" class="hero-stat pr-3 text-white no-underline transition hover:text-white/75"><p class="display text-lg font-bold sm:text-2xl">Academics</p><p class="mt-1 text-[9px] font-semibold uppercase tracking-wider text-white/60 sm:text-[10px]">Explore subject areas</p></a>
+            <a href="#nep" class="hero-stat border-l border-white/25 px-3 text-white no-underline transition hover:text-white/75 sm:px-6"><p class="display text-lg font-bold sm:text-2xl">NEP 2020</p><p class="mt-1 text-[9px] font-semibold uppercase tracking-wider text-white/60 sm:text-[10px]">Flexible learning</p></a>
+            <a href="#admissions" class="hero-stat border-l border-white/25 pl-3 text-white no-underline transition hover:text-white/75 sm:pl-6"><p class="display text-lg font-bold sm:text-2xl">Admissions</p><p class="mt-1 text-[9px] font-semibold uppercase tracking-wider text-white/60 sm:text-[10px]">Plan your next step</p></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="university-news" class="news-board px-3 py-8 sm:px-4 sm:py-10 lg:px-6" aria-labelledby="university-news-title">
+      <div class="container">
+        <div class="mb-5">
+          <p class="section-kicker text-[10px] font-bold uppercase text-davgold">Discover DAV University</p>
+          <h2 id="university-news-title" class="display mt-2 text-2xl font-bold text-dav sm:text-3xl">News &amp; Quick Links</h2>
+        </div>
+        <div class="row g-3 align-items-start">
+          <div class="col-lg-4">
+            <article class="news-board-card p-4">
+              <h3 class="news-board-title mb-2">→ Admissions</h3>
+              <div class="news-marquee-window">
+                <div class="news-marquee-track">
+                  <ul class="news-marquee-list">
+                    <li><span class="news-marquee-chevron" aria-hidden="true">›</span>Apply Now</li>
+                    <li><span class="news-marquee-chevron" aria-hidden="true">›</span>Prospectus 2026-27</li>
+                    <li><span class="news-marquee-chevron" aria-hidden="true">›</span>Scholarships</li>
+                    <li><span class="news-marquee-chevron" aria-hidden="true">›</span>Eligibility</li>
+                  </ul>
+                  <ul class="news-marquee-list" aria-hidden="true">
+                    <li><span class="news-marquee-chevron">›</span>Apply Now</li>
+                    <li><span class="news-marquee-chevron">›</span>Prospectus 2026-27</li>
+                    <li><span class="news-marquee-chevron">›</span>Scholarships</li>
+                    <li><span class="news-marquee-chevron">›</span>Eligibility</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="news-board-card p-4">
+              <h3 class="news-board-title mb-2">→ Academics</h3>
+              <div class="news-marquee-window">
+                <div class="news-marquee-track">
+                  <ul class="news-marquee-list">
+                    <li><span class="news-marquee-chevron" aria-hidden="true">›</span>Faculties &amp; Departments</li>
+                    <li><span class="news-marquee-chevron" aria-hidden="true">›</span>Curriculum</li>
+                    <li><span class="news-marquee-chevron" aria-hidden="true">›</span>Academic Calendar 2026-27</li>
+                    <li><span class="news-marquee-chevron" aria-hidden="true">›</span>Examination</li>
+                    <li><span class="news-marquee-chevron" aria-hidden="true">›</span>Mentor-Mentee Framework</li>
+                    <li><span class="news-marquee-chevron" aria-hidden="true">›</span>Academic Manual</li>
+                    <li><span class="news-marquee-chevron" aria-hidden="true">›</span>Academic Administrative Audit Manual</li>
+                  </ul>
+                  <ul class="news-marquee-list" aria-hidden="true">
+                    <li><span class="news-marquee-chevron">›</span>Faculties &amp; Departments</li>
+                    <li><span class="news-marquee-chevron">›</span>Curriculum</li>
+                    <li><span class="news-marquee-chevron">›</span>Academic Calendar 2026-27</li>
+                    <li><span class="news-marquee-chevron">›</span>Examination</li>
+                    <li><span class="news-marquee-chevron">›</span>Mentor-Mentee Framework</li>
+                    <li><span class="news-marquee-chevron">›</span>Academic Manual</li>
+                    <li><span class="news-marquee-chevron">›</span>Academic Administrative Audit Manual</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="news-board-card p-4">
+              <h3 class="news-board-title mb-2">→ Student Corner</h3>
+              <div class="news-marquee-window">
+                <div class="news-marquee-track">
+                  <ul class="news-marquee-list">
+                    <li><span class="news-marquee-chevron" aria-hidden="true">›</span>Student Council</li>
+                    <li><span class="news-marquee-chevron" aria-hidden="true">›</span>Field Trips</li>
+                    <li><span class="news-marquee-chevron" aria-hidden="true">›</span>Student Clubs</li>
+                    <li><span class="news-marquee-chevron" aria-hidden="true">›</span>Student Activities</li>
+                    <li><span class="news-marquee-chevron" aria-hidden="true">›</span>Community</li>
+                    <li><span class="news-marquee-chevron" aria-hidden="true">›</span>Career Guidance</li>
+                  </ul>
+                  <ul class="news-marquee-list" aria-hidden="true">
+                    <li><span class="news-marquee-chevron">›</span>Student Council</li>
+                    <li><span class="news-marquee-chevron">›</span>Field Trips</li>
+                    <li><span class="news-marquee-chevron">›</span>Student Clubs</li>
+                    <li><span class="news-marquee-chevron">›</span>Student Activities</li>
+                    <li><span class="news-marquee-chevron">›</span>Community</li>
+                    <li><span class="news-marquee-chevron">›</span>Career Guidance</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="nep" class="py-16 sm:py-20 lg:py-24">
+      <div class="container">
+        <div class="row g-4 g-xl-5 align-items-stretch">
+          <div class="col-xl-8">
+            <article class="nep-feature p-6 sm:p-8 lg:p-10">
+              <div class="nep-feature-heading">
+                <div>
+                  <p class="nep-kicker section-kicker text-[10px] font-extrabold uppercase">A flexible learning framework</p>
+                  <h2 id="nep-heading" tabindex="-1" class="display mt-3 max-w-2xl text-3xl font-bold leading-tight tracking-[-.045em] text-dav sm:text-4xl lg:text-[2.75rem]">Introducing India's NEP 2020</h2>
+                </div>
+                <span class="nep-year hidden select-none sm:block" aria-hidden="true">20<br>20</span>
+              </div>
+              <p class="relative z-10 mt-5 max-w-3xl text-sm leading-7 text-dav/70 sm:text-base sm:leading-8">DAV University embraces the National Education Policy 2020 through a modular learning approach. Modules and modular credits are intended to support a more flexible, student-centred academic journey, with options to explore learning pathways and progress over time.</p>
+              <div class="relative z-10 nep-highlight mt-6 max-w-3xl bg-[#faf7f7] px-5 py-4">
+                <p class="text-sm leading-6 text-dav/75"><strong class="text-dav">A more flexible way to learn.</strong> Explore the academic framework and confirm current rules, module availability and entry or exit options with the University.</p>
+              </div>
+              <div class="relative z-10 mt-7 flex flex-wrap items-center gap-3">
+                <a href="https://davuniversity.org/" target="_blank" rel="noopener noreferrer" class="bs-btn inline-flex items-center gap-2 bg-davgold px-5 py-3 text-sm font-bold text-white transition">Understand NEP 2020 <span aria-hidden="true">↗</span></a>
+                <span class="text-xs text-dav/50">Refer to the official University for current academic details.</span>
+              </div>
+            </article>
+          </div>
+          <aside class="col-xl-4 nep-sticky-aside" aria-labelledby="nep-enquiry-title">
+            <div class="nep-aside">
+              <div class="nep-aside-title px-5 pb-4 pt-5 sm:px-6">
+                <p class="section-kicker text-[9px] font-bold uppercase text-white/50">DAV University · Enquiry</p>
+                <h3 id="nep-enquiry-title" class="display mt-2 text-xl font-bold text-white">Request information</h3>
+              </div>
+              <form id="nep-enquiry-form" class="nep-enquiry-form" aria-label="DAV University enquiry details">
+                <div class="nep-enquiry-field">
+                  <label for="enquiry-name">Name *</label>
+                  <input id="enquiry-name" name="name" type="text" autocomplete="name" placeholder="Enter name">
+                </div>
+                <div class="nep-enquiry-field">
+                  <label for="enquiry-email">Email Address *</label>
+                  <input id="enquiry-email" name="email" type="email" autocomplete="email" placeholder="Enter email">
+                </div>
+                <div class="nep-enquiry-field">
+                  <label for="enquiry-mobile">Mobile Number *</label>
+                  <input id="enquiry-mobile" name="mobile" type="tel" autocomplete="tel" placeholder="+91 Mobile number">
+                </div>
+                <div class="nep-enquiry-field">
+                  <label for="enquiry-state">State *</label>
+                  <select id="enquiry-state" name="state">
+                    <option value="" selected>Select State</option>
+                    <option>Andaman and Nicobar</option><option>Andhra Pradesh</option><option>Arunachal Pradesh</option><option>Assam</option><option>Bihar</option><option>Chandigarh</option><option>Chhattisgarh</option><option>Dadra And Nagar Haveli</option><option>Daman And Diu</option><option>Delhi</option><option>Goa</option><option>Gujarat</option><option>Haryana</option><option>Himachal Pradesh</option><option>Jammu and Kashmir</option><option>Jharkhand</option><option>Karnataka</option><option>Kerala</option><option>Ladakh</option><option>Lakshadweep</option><option>Madhya Pradesh</option><option>Maharashtra</option><option>Manipur</option><option>Meghalaya</option><option>Mizoram</option><option>Nagaland</option><option>Odisha</option><option>Puducherry</option><option>Punjab</option><option>Rajasthan</option><option>Sikkim</option><option>Tamil Nadu</option><option>Telangana</option><option>Tripura</option><option>Uttar Pradesh</option><option>Uttarakhand</option><option>West Bengal</option>
+                  </select>
+                </div>
+                <div class="nep-enquiry-field">
+                  <label for="enquiry-city">City *</label>
+                  <input id="enquiry-city" name="city" type="text" autocomplete="address-level2" placeholder="Enter city">
+                </div>
+                <div class="nep-enquiry-field">
+                  <label for="enquiry-program">Program *</label>
+                  <select id="enquiry-program" name="program">
+                    <option value="" selected>Select Program</option>
+                    <option>Bachelor Programmes</option><option>Master Programmes</option><option>Co-Op Programmes</option><option>Doctoral Programmes</option><option>Short-Term Programmes</option><option>Post Graduate Diploma</option>
+                  </select>
+                </div>
+                <div class="nep-enquiry-field">
+                  <label for="enquiry-course">Course *</label>
+                  <input id="enquiry-course" name="course" type="text" placeholder="Enter course">
+                </div>
+                <div class="nep-enquiry-field">
+                  <label for="enquiry-specialization">Specialization *</label>
+                  <input id="enquiry-specialization" name="specialization" type="text" placeholder="Enter specialization">
+                </div>
+                <div class="nep-enquiry-field nep-enquiry-field--full">
+                  <label for="enquiry-captcha">Captcha * <span>(official form)</span></label>
+                  <input id="enquiry-captcha" name="captcha" type="text" placeholder="Complete on official form" disabled>
+                </div>
+                <label class="nep-enquiry-consent nep-enquiry-field--full">
+                  <input name="consent" type="checkbox">
+                  <span>I agree to receive information regarding my submitted enquiry on DAV University. *</span>
+                </label>
+                <p class="nep-enquiry-note">These fields are for display only and are not submitted. Complete the enquiry securely on DAV University's official form.</p>
+                <a class="nep-enquiry-submit" href="https://davuniversity.org/" target="_blank" rel="noopener noreferrer">Continue to official enquiry form <span aria-hidden="true">↗</span></a>
+              </form>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-14 sm:py-18 lg:py-20">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-7">
+            <p class="section-kicker text-[10px] font-bold uppercase text-davred">Welcome to DAV University</p>
+            <h2 class="section-heading display mt-3 max-w-2xl text-3xl font-semibold leading-tight tracking-[-.04em] text-dav sm:text-4xl">A university for learning, discovery and growth.</h2>
+            <p class="mt-5 max-w-2xl leading-7 text-dav/65">Located in Jalandhar, Punjab, DAV University brings together teaching, academic exploration and campus life. Discover the University and explore the academic and admissions information that can help you plan your next step.</p>
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span class="border-l-2 border-davgold py-1 pl-3 text-sm font-semibold text-dav/75">Jalandhar, Punjab</span>
+              <span class="border-l-2 border-davgold py-1 pl-3 text-sm font-semibold text-dav/75">Academic discovery</span>
+              <span class="border-l-2 border-davgold py-1 pl-3 text-sm font-semibold text-dav/75">NEP 2020</span>
+            </div>
+            <a href="https://davuniversity.org/" class="mt-7 inline-flex items-center gap-2 text-sm font-bold text-davblue">Discover DAV University <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="col-lg-5">
+            <figure class="about-photo relative mx-auto max-w-lg overflow-hidden rounded-[2rem] border-[5px] border-white sm:min-h-[390px]">
+              <img src="https://davuniversity.org/src2/img/new/dav-university-3.jpg" alt="DAV University students gathered outside a campus building" loading="lazy">
+              <span class="absolute left-5 top-5 z-10 rounded-full bg-white/90 px-4 py-2 text-[9px] font-bold uppercase tracking-[.18em] text-dav backdrop-blur-sm">Campus community</span>
+              <figcaption class="absolute bottom-0 left-0 z-10 max-w-[45%] p-4 text-white sm:p-6">
+                <span class="section-kicker text-[9px] font-bold uppercase text-davgold">DAV University · Jalandhar</span>
+                <span class="display mt-2 block text-lg font-bold sm:text-2xl">A campus full of possibility.</span>
+              </figcaption>
+              <aside class="about-highlight-card" aria-label="About learning at DAV University">
+                <strong>Explore. Learn. Grow.</strong>
+                <p>Discover academic areas and campus life at DAV University.</p>
+                <a href="#academics">Explore academics <span aria-hidden="true">↗</span></a>
+              </aside>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="academics" class="academic-stage py-16 sm:py-20 lg:py-24">
+      <div class="container">
+        <div class="row align-items-end gy-4">
+          <div class="col-lg-7">
+            <p class="section-kicker text-[10px] font-bold uppercase text-dav">Academic areas</p>
+            <h2 class="section-heading display mt-3 max-w-2xl text-3xl font-semibold leading-tight tracking-[-.04em] text-dav sm:text-4xl">Explore fields of study<br class="hidden sm:block"> at DAV University.</h2>
+          </div>
+          <div class="col-lg-5"><p class="max-w-lg leading-7 text-dav/65 lg:ml-auto">Browse broad academic areas and find subjects that match your interests. For current programmes, eligibility and course details, visit the official University website.</p></div>
+        </div>
+
+        <div class="mt-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div class="flex flex-wrap gap-2" role="group" aria-label="Filter academic areas">
+            <button class="filter-button rounded-full border border-dav/20 bg-dav px-4 py-2 text-xs font-bold text-white transition" data-filter="all" aria-pressed="true">All areas</button>
+            <button class="filter-button rounded-full border border-dav/20 px-4 py-2 text-xs font-bold text-dav transition hover:bg-white" data-filter="science" aria-pressed="false">Science &amp; technology</button>
+            <button class="filter-button rounded-full border border-dav/20 px-4 py-2 text-xs font-bold text-dav transition hover:bg-white" data-filter="business" aria-pressed="false">Business</button>
+            <button class="filter-button rounded-full border border-dav/20 px-4 py-2 text-xs font-bold text-dav transition hover:bg-white" data-filter="society" aria-pressed="false">Society &amp; learning</button>
+          </div>
+          <label class="relative block w-full lg:max-w-xs">
+            <span class="sr-only">Search academic areas</span>
+            <svg class="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-dav/45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.3 4.3" stroke-linecap="round"/></svg>
+            <input id="program-search" class="focus-ring w-full rounded-full border border-dav/15 bg-white py-3 pl-11 pr-4 text-sm outline-none placeholder:text-dav/45" type="search" placeholder="Search areas of study..." autocomplete="off">
+          </label>
+        </div>
+
+        <div id="program-grid" class="row g-3 mt-2">
+          <div class="col-md-6 col-xl-4 program-wrap" data-category="science" data-search="engineering technology computing innovation">
+            <article class="program-card h-full bg-white p-6 sm:p-7">
+              <div class="flex items-start justify-between"><span class="program-index" aria-hidden="true">01</span></div>
+              <p class="section-kicker mt-4 text-[9px] font-bold uppercase text-davblue">Build what comes next</p>
+              <h3 class="display mt-2 text-xl font-bold text-dav">Engineering &amp; technology</h3>
+              <p class="mt-3 text-sm leading-6 text-dav/65">Explore ideas in technology, engineering and the systems shaping tomorrow.</p>
+              <a href="https://davuniversity.org/" class="mt-5 inline-flex items-center gap-2 text-xs font-bold text-dav">Explore this area <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 program-wrap" data-category="science" data-search="sciences chemistry physics biology research">
+            <article class="program-card h-full bg-white p-6 sm:p-7">
+              <div class="flex items-start justify-between"><span class="program-index" aria-hidden="true">02</span></div>
+              <p class="section-kicker mt-4 text-[9px] font-bold uppercase text-davgreen">Question. Discover.</p>
+              <h3 class="display mt-2 text-xl font-bold text-dav">Sciences</h3>
+              <p class="mt-3 text-sm leading-6 text-dav/65">Follow your curiosity through scientific thinking, exploration and discovery.</p>
+              <a href="https://davuniversity.org/" class="mt-5 inline-flex items-center gap-2 text-xs font-bold text-dav">Explore this area <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 program-wrap" data-category="business" data-search="management commerce business economics leadership">
+            <article class="program-card h-full bg-white p-6 sm:p-7">
+              <div class="flex items-start justify-between"><span class="program-index" aria-hidden="true">03</span></div>
+              <p class="section-kicker mt-4 text-[9px] font-bold uppercase text-davred">Ideas into action</p>
+              <h3 class="display mt-2 text-xl font-bold text-dav">Business &amp; management</h3>
+              <p class="mt-3 text-sm leading-6 text-dav/65">Discover the ideas, decisions and leadership behind organisations and markets.</p>
+              <a href="https://davuniversity.org/" class="mt-5 inline-flex items-center gap-2 text-xs font-bold text-dav">Explore this area <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 program-wrap" data-category="society" data-search="humanities social sciences society culture communication">
+            <article class="program-card h-full bg-white p-6 sm:p-7">
+              <div class="flex items-start justify-between"><span class="program-index" aria-hidden="true">04</span></div>
+              <p class="section-kicker mt-4 text-[9px] font-bold uppercase text-davblue">Understand our world</p>
+              <h3 class="display mt-2 text-xl font-bold text-dav">Humanities &amp; social sciences</h3>
+              <p class="mt-3 text-sm leading-6 text-dav/65">Study people, ideas and cultures to better understand the world around us.</p>
+              <a href="https://davuniversity.org/" class="mt-5 inline-flex items-center gap-2 text-xs font-bold text-dav">Explore this area <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 program-wrap" data-category="science" data-search="agriculture environment sustainability food">
+            <article class="program-card h-full bg-white p-6 sm:p-7">
+              <div class="flex items-start justify-between"><span class="program-index" aria-hidden="true">05</span></div>
+              <p class="section-kicker mt-4 text-[9px] font-bold uppercase text-davgreen">Learn from the land</p>
+              <h3 class="display mt-2 text-xl font-bold text-dav">Agriculture &amp; environment</h3>
+              <p class="mt-3 text-sm leading-6 text-dav/65">Explore the connections between agriculture, natural resources and a sustainable future.</p>
+              <a href="https://davuniversity.org/" class="mt-5 inline-flex items-center gap-2 text-xs font-bold text-dav">Explore this area <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 program-wrap" data-category="society" data-search="education teaching learning teacher">
+            <article class="program-card h-full bg-white p-6 sm:p-7">
+              <div class="flex items-start justify-between"><span class="program-index" aria-hidden="true">06</span></div>
+              <p class="section-kicker mt-4 text-[9px] font-bold uppercase text-davred">Shape the next generation</p>
+              <h3 class="display mt-2 text-xl font-bold text-dav">Education &amp; learning</h3>
+              <p class="mt-3 text-sm leading-6 text-dav/65">Explore the practice and possibility of teaching, learning and educational leadership.</p>
+              <a href="https://davuniversity.org/" class="mt-5 inline-flex items-center gap-2 text-xs font-bold text-dav">Explore this area <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+        </div>
+        <p id="no-results" class="mt-5 hidden rounded-xl bg-white p-5 text-sm text-dav/65" role="status">No areas match that search. Try another subject or category.</p>
+        <p class="mt-6 text-xs leading-5 text-dav/50">Academic areas shown are a starting point for this homepage demo. Check the official DAV University website for current programme availability and eligibility.</p>
+      </div>
+    </section>
+
+    <section id="experience" class="py-16 sm:py-20 lg:py-24">
+      <div class="container">
+        <div class="row align-items-end gy-4">
+          <div class="col-lg-7">
+            <p class="section-kicker text-[10px] font-bold uppercase text-davblue">An education shaped around you</p>
+            <h2 class="display mt-3 max-w-2xl text-3xl font-semibold leading-tight tracking-[-.04em] text-dav sm:text-4xl">Make space for the way you learn.</h2>
+          </div>
+          <div class="col-lg-5">
+            <p class="max-w-lg leading-7 text-dav/65 lg:ml-auto">University is a chance to explore ideas, find your strengths and connect what you learn to the world around you.</p>
+          </div>
+        </div>
+        <div class="row g-3 mt-4">
+          <div class="col-md-4">
+            <article class="experience-card h-full border border-dav/10 bg-white p-6 sm:p-7">
+              <span aria-hidden="true">01 / EXPLORE</span>
+              <h3 class="display mt-5 text-lg font-bold text-dav">Follow your curiosity</h3>
+              <p class="mt-2 text-sm leading-6 text-dav/65">Explore subjects, ask new questions and discover the areas that inspire you.</p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="experience-card h-full border border-dav/10 bg-white p-6 sm:p-7">
+              <span aria-hidden="true">02 / PARTICIPATE</span>
+              <h3 class="display mt-5 text-lg font-bold text-dav">Learn by taking part</h3>
+              <p class="mt-2 text-sm leading-6 text-dav/65">Bring ideas to life through discussion, collaboration and hands-on discovery.</p>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="experience-card h-full border border-dav/10 bg-white p-6 sm:p-7">
+              <span aria-hidden="true">03 / GROW</span>
+              <h3 class="display mt-5 text-lg font-bold text-dav">Grow beyond the classroom</h3>
+              <p class="mt-2 text-sm leading-6 text-dav/65">Build confidence, share perspectives and shape the next chapter of your journey.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="programmes-showcase" class="programmes-showcase px-3 sm:px-4 lg:px-6" aria-labelledby="programmes-showcase-title">
+      <div class="programs-showcase-panel mx-auto">
+        <div class="showcase-top-panel">
+          <header class="programs-showcase-heading">
+            <p>Programmes offered</p>
+            <h2 id="programmes-showcase-title">Find the path that feels right for you.</h2>
+          </header>
+          <div class="showcase-levels" aria-label="Explore programmes by level">
+            <a class="showcase-level-card" href="#academics">
+              <img src="https://davuniversity.org/src2/img/new/dav-university-3.jpg" alt="" loading="lazy">
+              <span>Undergraduate</span>
+            </a>
+            <a class="showcase-level-card" href="#academics">
+              <img src="https://davuniversity.org/src2/img/new/dav-university-2.jpg" alt="" loading="lazy">
+              <span>Postgraduate</span>
+            </a>
+            <a class="showcase-level-card" href="https://davuniversity.org/study-choice/doctoral-programmes" target="_blank" rel="noopener noreferrer">
+              <img src="https://davuniversity.org/src2/img/home/back1.jpg?v=4" alt="" loading="lazy">
+              <span>Doctoral</span>
+            </a>
+            <a class="showcase-level-card" href="https://davuniversity.org/innerpage/short-term-programmes" target="_blank" rel="noopener noreferrer">
+              <img src="https://davuniversity.org/src2/img/new/dav-university-3.jpg" alt="" loading="lazy">
+              <span>Diploma &amp; short term</span>
+            </a>
+          </div>
+        </div>
+        <div class="showcase-lower-panel">
+          <div class="showcase-details">
+            <div class="showcase-stat">
+              <strong>8</strong>
+              <span>academic areas to explore and discover</span>
+            </div>
+            <div class="showcase-faculties">
+              <p>Explore academic areas</p>
+              <div class="showcase-faculty-grid">
+                <a href="#academics">Engineering &amp; Technology</a>
+                <a href="#academics">Sciences</a>
+                <a href="#academics">Commerce, Business &amp; Economics</a>
+                <a href="#academics">Humanities &amp; Social Sciences</a>
+                <a href="#academics">Agriculture</a>
+                <a href="#academics">Physical Education</a>
+                <a href="#academics">Pharmaceutical &amp; Allied Health Sciences</a>
+                <a href="#academics">Law &amp; Legal Studies</a>
+              </div>
+            </div>
+          </div>
+          <div class="showcase-bottom-bar">
+            <strong>ADMISSIONS 2026</strong>
+            <a href="https://davuniversity.org/" target="_blank" rel="noopener noreferrer">Scholarships</a>
+            <a href="https://davuniversity.org/" target="_blank" rel="noopener noreferrer">Industry programmes</a>
+            <a href="https://davuniversity.org/study-choice/doctoral-programmes" target="_blank" rel="noopener noreferrer">Research &amp; doctoral study</a>
+            <a class="showcase-apply" href="https://davuniversity.org/admissions/" target="_blank" rel="noopener noreferrer">Apply now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="campus" class="py-16 sm:py-20 lg:py-24">
+      <div class="container">
+        <div class="row align-items-end gy-4">
+          <div class="col-lg-7"><p class="section-kicker text-[10px] font-bold uppercase text-dav">More than a classroom</p><h2 class="display mt-3 text-3xl font-semibold leading-tight tracking-[-.04em] text-dav sm:text-4xl">A campus is a community<br>you grow into.</h2></div>
+          <div class="col-lg-5"><p class="max-w-lg leading-7 text-dav/65 lg:ml-auto">Learning happens in conversations, shared ideas and the moments between lectures. Find space to connect, explore and make university life your own.</p></div>
+        </div>
+        <div class="row g-3 mt-4">
+          <div class="col-md-7">
+            <article class="campus-photo group relative h-[330px] overflow-hidden rounded-[1.5rem] bg-dav sm:h-[430px]">
+              <img src="https://davuniversity.org/src2/img/new/dav-university-3.jpg" alt="DAV University students gathered outside a campus building" class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]" loading="lazy">
+              <div class="image-caption absolute inset-0 flex flex-col justify-end p-6 text-white sm:p-8"><p class="section-kicker text-[9px] font-bold uppercase text-davgold">Learn together</p><h3 class="display mt-2 text-2xl font-bold">Ideas grow in good company.</h3></div>
+            </article>
+          </div>
+          <div class="col-md-5">
+            <article class="campus-photo group relative h-[330px] overflow-hidden rounded-[1.5rem] bg-dav sm:h-[430px]">
+              <img src="https://davuniversity.org/src2/img/new/dav-university-2.jpg" alt="DAV University student taking part in a class" class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]" loading="lazy">
+              <div class="image-caption absolute inset-0 flex flex-col justify-end p-6 text-white sm:p-8"><p class="section-kicker text-[9px] font-bold uppercase text-davgold">Make room for curiosity</p><h3 class="display mt-2 text-2xl font-bold">Find your next question.</h3></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="student-life" class="student-life-section bg-davmist/50 py-16 sm:py-20">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-5">
+            <p class="section-kicker text-[10px] font-bold uppercase text-davgreen">Find your people. Find your rhythm.</p>
+            <h2 class="display mt-3 text-3xl font-semibold leading-tight tracking-[-.04em] text-dav sm:text-4xl">Make university life your own.</h2>
+            <p class="mt-4 max-w-lg leading-7 text-dav/65">The moments outside class matter too. Make time for new interests, shared experiences and the friendships that make a place feel like yours.</p>
+            <a href="https://davuniversity.org/" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-davgreen">Explore DAV University <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="col-lg-7">
+            <div class="grid gap-3 sm:grid-cols-2">
+              <article class="life-card bg-white p-5 sm:p-6">
+                <span class="text-xs font-bold uppercase tracking-wider text-davgold">01 / Discover</span>
+                <h3 class="display mt-3 text-lg font-bold text-dav">Try something new</h3>
+                <p class="mt-2 text-sm leading-6 text-dav/65">Make room for interests and experiences that complement your studies.</p>
+              </article>
+              <article class="life-card bg-white p-5 sm:p-6">
+                <span class="text-xs font-bold uppercase tracking-wider text-davblue">02 / Connect</span>
+                <h3 class="display mt-3 text-lg font-bold text-dav">Learn with others</h3>
+                <p class="mt-2 text-sm leading-6 text-dav/65">Share ideas, collaborate and get to know people with different perspectives.</p>
+              </article>
+              <article class="life-card bg-white p-5 sm:p-6">
+                <span class="text-xs font-bold uppercase tracking-wider text-davred">03 / Belong</span>
+                <h3 class="display mt-3 text-lg font-bold text-dav">Build your community</h3>
+                <p class="mt-2 text-sm leading-6 text-dav/65">Create connections and make the campus experience your own.</p>
+              </article>
+              <article class="life-card bg-davgreen p-5 text-white sm:p-6">
+                <span class="text-xs font-bold uppercase tracking-wider text-white/75">Your journey</span>
+                <h3 class="display mt-3 text-lg font-bold">A new chapter starts with a first step.</h3>
+                <a href="#admissions" class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-white underline decoration-white/50 underline-offset-4">See how to get started <span aria-hidden="true">↓</span></a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="admissions" class="py-16 sm:py-20 lg:py-24">
+      <div class="container">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="section-kicker text-[10px] font-bold uppercase text-davred">Your next step</p>
+          <h2 class="display mt-3 text-3xl font-semibold leading-tight tracking-[-.04em] text-dav sm:text-4xl">Start your admissions journey.</h2>
+          <p class="mx-auto mt-4 max-w-2xl leading-7 text-dav/65">Explore your options and check the latest official information before you apply.</p>
+        </div>
+        <div class="row g-3 mt-5">
+          <div class="col-md-4">
+            <article class="admission-step h-full border border-dav/10 bg-white p-6">
+              <span class="text-sm font-extrabold text-davgold">STEP 01</span>
+              <h3 class="display mt-3 text-lg font-bold text-dav">Explore study areas</h3>
+              <p class="mt-2 text-sm leading-6 text-dav/65">Browse areas of study and shortlist the options that match your interests.</p>
+              <a href="#academics" class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-dav">Browse academics <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="admission-step h-full border border-dav/10 bg-white p-6">
+              <span class="text-sm font-extrabold text-davblue">STEP 02</span>
+              <h3 class="display mt-3 text-lg font-bold text-dav">Check official details</h3>
+              <p class="mt-2 text-sm leading-6 text-dav/65">Review current eligibility, deadlines, fees and application requirements with the University.</p>
+              <a href="https://davuniversity.org/" class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-davblue">Visit official website <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="admission-step h-full border border-dav/10 bg-white p-6">
+              <span class="text-sm font-extrabold text-davgreen">STEP 03</span>
+              <h3 class="display mt-3 text-lg font-bold text-dav">Connect with admissions</h3>
+              <p class="mt-2 text-sm leading-6 text-dav/65">Use the official admissions channel for application guidance and the latest updates.</p>
+              <a href="https://davuniversity.org/admissions/" class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-davgreen">Admissions information <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="notices" class="bg-white py-16 sm:py-20">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-lg-5">
+            <p class="section-kicker text-[10px] font-bold uppercase text-dav">University information</p>
+            <h2 class="display mt-3 text-3xl font-semibold leading-tight tracking-[-.04em] text-dav sm:text-4xl">Useful information for your next step.</h2>
+            <p class="mt-4 max-w-md leading-7 text-dav/65">Explore the learning framework and find official admissions guidance from DAV University.</p>
+            <a href="https://davuniversity.org/" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-dav">Visit DAV University <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="col-lg-7">
+            <article class="flex flex-col gap-4 border-y border-dav/15 py-5 sm:flex-row sm:items-center sm:justify-between">
+              <div><span class="rounded-full bg-davmist px-3 py-1 text-[9px] font-bold uppercase tracking-wider text-dav">Learning framework</span><h3 class="display mt-3 text-lg font-bold">Explore the NEP 2020 learning experience</h3><p class="mt-1 text-sm text-dav/60">Learn about modular learning and the academic approach described on this page.</p></div>
+              <a href="#nep" class="shrink-0 text-sm font-bold text-dav" aria-label="Learn about the NEP 2020 modular system">Learn more ↗</a>
+            </article>
+            <article class="flex flex-col gap-4 border-b border-dav/15 py-5 sm:flex-row sm:items-center sm:justify-between">
+              <div><span class="rounded-full bg-davgold/20 px-3 py-1 text-[9px] font-bold uppercase tracking-wider text-dav">Admissions</span><h3 class="display mt-3 text-lg font-bold">Plan your application</h3><p class="mt-1 text-sm text-dav/60">Find official guidance on application steps, eligibility and important dates.</p></div>
+              <a href="https://davuniversity.org/admissions/" class="shrink-0 text-sm font-bold text-dav">Admissions ↗</a>
+            </article>
+            <p class="mt-4 text-[10px] leading-5 text-dav/45">For the latest programme, admissions and University information, refer to the official DAV University website.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-3 py-5 sm:px-4 sm:py-7 lg:px-6">
+      <div class="cta-panel relative mx-auto max-w-[1600px] overflow-hidden rounded-[1.5rem] px-6 py-10 text-white sm:px-12 sm:py-14">
+        <div class="relative z-10 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div><p class="section-kicker text-[10px] font-bold uppercase text-davgold">Your next chapter starts here</p><h2 class="display mt-3 text-2xl font-semibold sm:text-3xl">Curiosity brought you here. See where it leads.</h2><p class="mt-3 max-w-2xl text-sm leading-6 text-white/70">Explore programmes, eligibility and the latest admissions information on the official DAV University website.</p></div>
+          <a id="admissions-cta" href="https://davuniversity.org/admissions/" class="bs-btn inline-flex shrink-0 items-center justify-center gap-3 bg-davgold px-6 py-3.5 text-sm font-bold text-white transition">Explore admissions <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-8 bg-dav text-white">
+    <div class="container py-10">
+      <div class="row gy-5">
+        <div class="col-lg-5">
+          <a href="#top" class="inline-flex items-center gap-3 text-white no-underline">
+            <img src="dav-university-logo.png" alt="" class="footer-logo rounded-lg object-contain">
+            <span class="font-display text-2xl font-extrabold tracking-tight text-white">DAV UNIVERSITY</span>
+          </a>
+          <p class="mt-4 max-w-sm text-sm leading-6 text-white/55">A student-centred university experience inspired by the possibilities of learning.</p>
+        </div>
+        <div class="col-6 col-lg-2"><p class="text-xs font-bold uppercase tracking-wider text-davgold">Explore</p><ul class="mt-4 space-y-3 text-xs text-white/65"><li><a class="hover:text-white" href="#about">About DAV</a></li><li><a class="hover:text-white" href="#academics">Academic areas</a></li><li><a class="hover:text-white" href="#experience">Learning experience</a></li><li><a class="hover:text-white" href="#nep">NEP 2020</a></li></ul></div>
+        <div class="col-6 col-lg-2"><p class="text-xs font-bold uppercase tracking-wider text-davgold">Campus &amp; admissions</p><ul class="mt-4 space-y-3 text-xs text-white/65"><li><a class="hover:text-white" href="#campus">Campus life</a></li><li><a class="hover:text-white" href="#student-life">Student life</a></li><li><a class="hover:text-white" href="#admissions">Admissions journey</a></li><li><a class="hover:text-white" href="#notices">News &amp; notices</a></li></ul></div>
+        <div class="col-lg-3"><p class="text-xs font-bold uppercase tracking-wider text-davgold">A note about this demo</p><p class="mt-4 text-xs leading-5 text-white/55">This is a standalone homepage concept. Academic availability, announcements, contacts and official branding should be verified with DAV University before publishing.</p></div>
+      </div>
+      <div class="mt-8 flex flex-col gap-2 border-t border-white/15 pt-5 text-[10px] text-white/45 sm:flex-row sm:items-center sm:justify-between">
+        <span>DAV University · Jalandhar, Punjab</span><span>Homepage concept · Built with HTML, Tailwind CSS, Bootstrap &amp; JavaScript</span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="sticky-admissions-tab" href="#admissions" aria-label="Go to 2026-2027 admissions">
+    <span>Admissions 2026-2027</span><span aria-hidden="true">↗</span>
+  </a>
+
+  <div class="fixed-contact-actions" aria-label="Contact DAV University">
+    <a class="fixed-contact-action fixed-contact-action--phone" href="tel:+917087017551" aria-label="Call DAV University at 070870-17551" title="Call 070870-17551">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3H4.5A1.5 1.5 0 0 0 3 4.5C3 13.6 10.4 21 19.5 21a1.5 1.5 0 0 0 1.5-1.5V17l-5-2-1.3 2a14 14 0 0 1-5.2-5.2L11.5 10z"/></svg>
+    </a>
+    <a class="fixed-contact-action fixed-contact-action--whatsapp" href="https://wa.me/918264911134" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp DAV University at 8264911134" title="WhatsApp 8264911134">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L3 20l1.2-4.9a8.2 8.2 0 1 1 16-3.4Z"/><path d="M8.3 8.1c.3-.6.5-.6.8-.6h.5c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4 0 .6l-.6.8c-.2.2-.2.4-.1.6.6 1 1.4 1.8 2.5 2.3.2.1.4.1.6-.1l.8-.9c.2-.2.4-.2.7-.1l1.7.8c.3.1.4.3.4.5 0 .4-.2 1.2-.7 1.6-.5.5-1.2.7-1.9.6-1.1-.2-2.5-.9-3.8-2.1-1.1-1-2.1-2.5-2.4-3.5-.3-1 0-1.9.2-2.7Z"/></svg>
+    </a>
+  </div>
+
+  <nav class="mobile-quick-nav" aria-label="Quick actions">
+    <a href="#academics">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H20v16H5.5A2.5 2.5 0 0 0 3 21.5z"/><path d="M3 5.5v16M7 7h9M7 11h9"/></svg>
+      <span>Academics</span>
+    </a>
+    <a href="#admissions">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 12 4l9 5.5-9 5.5z"/><path d="M6.5 12v5.2c3.3 2.5 7.7 2.5 11 0V12M21 10v6"/></svg>
+      <span>Admission</span>
+    </a>
+    <a id="quick-call-action" href="tel:+917087017551" aria-label="Call 070870-17551">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3H4.5A1.5 1.5 0 0 0 3 4.5C3 13.6 10.4 21 19.5 21a1.5 1.5 0 0 0 1.5-1.5V17l-5-2-1.3 2a14 14 0 0 1-5.2-5.2L11.5 10z"/></svg>
+      <span>070870-<br>17551</span>
+    </a>
+    <button id="quick-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-navigation">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <span>Menu</span>
+    </button>
+  </nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const quickMenuToggle = document.getElementById("quick-menu-toggle");
+    const siteNavigation = document.getElementById("site-navigation");
+    const navigationMenus = [...siteNavigation.querySelectorAll(":scope > details")];
+    const programmeMenuOptions = [
+      ["Bachelor's Programmes", "Undergraduate"],
+      ["PG Programmes", "Postgraduate"],
+      ["Industry Integrated", "Industry Integrated"],
+      ["Diploma / Short Term", "Diploma / Short Term"]
+    ];
+    navigationMenus.forEach((menu, menuIndex) => {
+      const dropdown = menu.querySelector(".menu-dropdown--mega");
+      if (!dropdown) return;
+
+      const categories = [...dropdown.querySelectorAll(".menu-category")];
+      const categoryGrid = document.createElement("div");
+      categoryGrid.className = "menu-category-grid";
+      categories.forEach((category) => categoryGrid.append(category));
+
+      const panel = document.createElement("aside");
+      panel.className = "menu-discover-panel";
+      const kicker = document.createElement("p");
+      kicker.className = "menu-discover-kicker";
+      kicker.textContent = "Explore programmes by faculty";
+      const title = document.createElement("h2");
+      title.className = "menu-discover-title";
+      title.textContent = menu.querySelector(":scope > summary").textContent.trim();
+      const count = document.createElement("p");
+      count.className = "menu-discover-count";
+      const programmeCount = categories.reduce((total, category) =>
+        total + category.querySelectorAll("li a:not(.menu-download)").length, 0
+      );
+      const countValue = document.createElement("strong");
+      countValue.textContent = String(programmeCount);
+      count.append(countValue, " programmes to explore");
+      const searchLabel = document.createElement("label");
+      searchLabel.className = "menu-discover-label";
+      searchLabel.textContent = "Find a programme";
+      const search = document.createElement("input");
+      search.className = "menu-discover-search";
+      search.type = "search";
+      search.placeholder = "Search by course or faculty";
+      search.setAttribute("aria-label", `Search ${title.textContent}`);
+      searchLabel.append(search);
+      const levelLabel = document.createElement("p");
+      levelLabel.className = "menu-discover-label";
+      levelLabel.textContent = "Explore programme levels";
+      const levelGrid = document.createElement("div");
+      levelGrid.className = "menu-level-grid";
+
+      programmeMenuOptions.forEach(([menuName, label]) => {
+        const targetMenuIndex = navigationMenus.findIndex((item) =>
+          item.querySelector(":scope > summary").textContent.trim() === menuName
+        );
+        if (targetMenuIndex < 0) return;
+        const button = document.createElement("button");
+        button.className = "menu-level-button";
+        button.type = "button";
+        button.setAttribute("aria-label", `Show ${label} programmes`);
+        const image = document.createElement("img");
+        image.src = targetMenuIndex % 2 === 0
+          ? "https://davuniversity.org/src2/img/new/dav-university-3.jpg"
+          : "https://davuniversity.org/src2/img/new/dav-university-2.jpg";
+        image.alt = "";
+        image.loading = "lazy";
+        image.setAttribute("aria-hidden", "true");
+        const buttonLabel = document.createElement("span");
+        buttonLabel.textContent = label;
+        button.append(image, buttonLabel);
+        button.dataset.menuIndex = String(targetMenuIndex);
+        if (targetMenuIndex === menuIndex) button.setAttribute("aria-current", "page");
+        button.addEventListener("click", () => {
+          if (targetMenuIndex !== menuIndex) navigationMenus[targetMenuIndex].open = true;
+        });
+        levelGrid.append(button);
+      });
+
+      const foot = document.createElement("p");
+      foot.className = "menu-discover-foot";
+      const footTitle = document.createElement("strong");
+      footTitle.textContent = "Find your next chapter";
+      foot.append(footTitle, "Explore study options and discover a path that fits your interests.");
+      panel.append(kicker, title, count, searchLabel, levelLabel, levelGrid, foot);
+      dropdown.replaceChildren(panel, categoryGrid);
+
+      const emptyMessage = document.createElement("p");
+      emptyMessage.className = "menu-search-empty";
+      emptyMessage.hidden = true;
+      emptyMessage.textContent = "No programmes match your search.";
+      categoryGrid.append(emptyMessage);
+
+      search.addEventListener("input", () => {
+        const query = search.value.trim().toLocaleLowerCase();
+        let hasVisibleCategory = false;
+        categories.forEach((category) => {
+          const lists = [...category.querySelectorAll(":scope > ul")];
+          let hasVisibleList = false;
+          lists.forEach((list) => {
+            let hasVisibleItem = false;
+            list.querySelectorAll("li").forEach((item) => {
+              item.hidden = !item.textContent.toLocaleLowerCase().includes(query);
+              hasVisibleItem ||= !item.hidden;
+            });
+            list.hidden = !hasVisibleItem;
+            const heading = list.previousElementSibling;
+            if (heading?.tagName === "H3") heading.hidden = !hasVisibleItem;
+            hasVisibleList ||= hasVisibleItem;
+          });
+          category.hidden = !hasVisibleList;
+          hasVisibleCategory ||= hasVisibleList;
+        });
+        emptyMessage.hidden = hasVisibleCategory;
+      });
+    });
+    navigationMenus.forEach((menu) => {
+      menu.addEventListener("toggle", () => {
+        if (!menu.open) return;
+        navigationMenus.forEach((otherMenu) => {
+          if (otherMenu !== menu) otherMenu.open = false;
+        });
+      });
+    });
+    window.addEventListener("scroll", () => {
+      navigationMenus.forEach((menu) => {
+        menu.open = false;
+      });
+    }, { passive: true });
+    menuToggle.addEventListener("click", () => {
+      const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!expanded));
+      menuToggle.setAttribute("aria-label", expanded ? "Open navigation menu" : "Close navigation menu");
+      quickMenuToggle.setAttribute("aria-expanded", String(!expanded));
+      quickMenuToggle.setAttribute("aria-label", expanded ? "Open navigation menu" : "Close navigation menu");
+      siteNavigation.classList.toggle("mobile-menu-open", !expanded);
+    });
+    quickMenuToggle.addEventListener("click", () => menuToggle.click());
+    siteNavigation.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (window.matchMedia("(max-width: 1279.98px)").matches) {
+          siteNavigation.classList.remove("mobile-menu-open");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Open navigation menu");
+          quickMenuToggle.setAttribute("aria-expanded", "false");
+          quickMenuToggle.setAttribute("aria-label", "Open navigation menu");
+        }
+      });
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && siteNavigation.classList.contains("mobile-menu-open")) {
+        siteNavigation.classList.remove("mobile-menu-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        quickMenuToggle.setAttribute("aria-expanded", "false");
+        quickMenuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.focus();
+      }
+    });
+
+    const filterButtons = [...document.querySelectorAll(".filter-button")];
+    const searchInput = document.getElementById("program-search");
+    const programCards = [...document.querySelectorAll(".program-wrap")];
+    const noResults = document.getElementById("no-results");
+    let activeCategory = "all";
+
+    function updatePrograms() {
+      const searchTerm = searchInput.value.trim().toLowerCase();
+      let visibleCount = 0;
+      programCards.forEach((card) => {
+        const matchesCategory = activeCategory === "all" || card.dataset.category === activeCategory;
+        const matchesSearch = card.dataset.search.includes(searchTerm) || card.innerText.toLowerCase().includes(searchTerm);
+        const visible = matchesCategory && matchesSearch;
+        card.hidden = !visible;
+        if (visible) visibleCount += 1;
+      });
+      noResults.classList.toggle("hidden", visibleCount !== 0);
+    }
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        activeCategory = button.dataset.filter;
+        filterButtons.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+        updatePrograms();
+      });
+    });
+    searchInput.addEventListener("input", updatePrograms);
+
+  </script>
+</body>
+</html>
